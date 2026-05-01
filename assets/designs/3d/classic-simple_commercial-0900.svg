@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1050" role="img" aria-label="Concept 3D architectural render">
+  <defs>
+    <linearGradient id="sky-classic-simple_commercial-0900" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0c1b2b"/>
+      <stop offset="1" stop-color="#d9e3ee"/>
+    </linearGradient>
+    <filter id="shadow-classic-simple_commercial-0900" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#000" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1050" fill="url(#sky-classic-simple_commercial-0900)"/>
+  <circle cx="1290" cy="180" r="74" fill="#f0b14b" opacity=".74"/>
+  <ellipse cx="820" cy="780" rx="620" ry="130" fill="#07111f" opacity=".28"/>
+  <g filter="url(#shadow-classic-simple_commercial-0900)"><g>
+      <polygon points="820.0,90.0 970.8,168.0 841.1,235.1 690.3,157.1" fill="#6b7280" stroke="#101820" stroke-width="2"/>
+      <polygon points="970.8,168.0 970.8,338.0 841.1,405.1 841.1,235.1" fill="#d9e3ee" stroke="#101820" stroke-width="2"/>
+      <polygon points="841.1,235.1 841.1,405.1 690.3,327.1 690.3,157.1" fill="#e6edf5" stroke="#101820" stroke-width="2"/>
+      <rect x="788.6" y="126.5" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="830.6" y="144.5" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">معرض كبير</text>
+    </g><g>
+      <polygon points="936.0,150.0 1086.0,227.6 957.0,294.3 807.0,216.7" fill="#6b7280" stroke="#101820" stroke-width="2"/>
+      <polygon points="1086.0,227.6 1086.0,397.6 957.0,464.3 957.0,294.3" fill="#d9e3ee" stroke="#101820" stroke-width="2"/>
+      <polygon points="957.0,294.3 957.0,464.3 807.0,386.7 807.0,216.7" fill="#e6edf5" stroke="#101820" stroke-width="2"/>
+      <rect x="904.5" y="186.2" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="946.5" y="204.2" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">مكاتب</text>
+    </g><g>
+      <polygon points="1052.0,210.0 1202.8,288.0 1073.1,355.1 922.3,277.1" fill="#6b7280" stroke="#101820" stroke-width="2"/>
+      <polygon points="1202.8,288.0 1202.8,458.0 1073.1,525.1 1073.1,355.1" fill="#d9e3ee" stroke="#101820" stroke-width="2"/>
+      <polygon points="1073.1,355.1 1073.1,525.1 922.3,447.1 922.3,277.1" fill="#e6edf5" stroke="#101820" stroke-width="2"/>
+      <rect x="1020.6" y="246.5" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="1062.6" y="264.5" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">استقبال</text>
+    </g><g>
+      <polygon points="718.5,169.7 841.2,233.1 735.7,287.7 612.9,224.2" fill="#6b7280" stroke="#101820" stroke-width="2"/>
+      <polygon points="841.2,233.1 841.2,376.0 735.7,430.6 735.7,287.7" fill="#d9e3ee" stroke="#101820" stroke-width="2"/>
+      <polygon points="735.7,287.7 735.7,430.6 612.9,367.1 612.9,224.2" fill="#e6edf5" stroke="#101820" stroke-width="2"/>
+      <rect x="685.1" y="192.7" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="727.1" y="210.7" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">خدمات</text>
+    </g><g>
+      <polygon points="834.5,202.5 977.3,276.4 854.5,339.9 711.7,266.0" fill="#6b7280" stroke="#101820" stroke-width="2"/>
+      <polygon points="977.3,276.4 977.3,446.4 854.5,509.9 854.5,339.9" fill="#d9e3ee" stroke="#101820" stroke-width="2"/>
+      <polygon points="854.5,339.9 854.5,509.9 711.7,436.0 711.7,266.0" fill="#e6edf5" stroke="#101820" stroke-width="2"/>
+      <rect x="802.5" y="235.2" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="844.5" y="253.2" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">مخازن</text>
+    </g><g>
+      <polygon points="950.5,262.5 1096.6,338.1 971.0,403.1 824.8,327.5" fill="#6b7280" stroke="#101820" stroke-width="2"/>
+      <polygon points="1096.6,338.1 1096.6,508.1 971.0,573.1 971.0,403.1" fill="#d9e3ee" stroke="#101820" stroke-width="2"/>
+      <polygon points="971.0,403.1 971.0,573.1 824.8,497.5 824.8,327.5" fill="#e6edf5" stroke="#101820" stroke-width="2"/>
+      <rect x="918.7" y="296.8" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="960.7" y="314.8" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">غرفة كهربا</text>
+    </g></g>
+  <rect x="510" y="495" width="28" height="110" fill="#5c6470" opacity=".58"/><rect x="582" y="495" width="28" height="110" fill="#5c6470" opacity=".58"/><rect x="654" y="495" width="28" height="110" fill="#5c6470" opacity=".58"/><rect x="726" y="495" width="28" height="110" fill="#5c6470" opacity=".58"/><rect x="798" y="495" width="28" height="110" fill="#5c6470" opacity=".58"/><rect x="870" y="495" width="28" height="110" fill="#5c6470" opacity=".58"/><rect x="942" y="495" width="28" height="110" fill="#5c6470" opacity=".58"/>
+  <path d="M330 790 C520 690 1090 680 1280 792" fill="none" stroke="#5c6470" stroke-width="8" opacity=".75"/>
+  <text x="1490" y="96" text-anchor="end" font-size="44" font-weight="900" fill="#eef5fb">تصور 3D مبدئي - تجاري بسيط كلاسيكي</text>
+  <text x="1490" y="142" text-anchor="end" font-size="25" fill="#d9e3ee">مبني على قالب 2D: classic-simple_commercial-0900 | 900-999 م²</text>
+  <rect x="70" y="960" width="1460" height="52" rx="8" fill="#07111f" opacity=".78"/>
+  <text x="1490" y="994" text-anchor="end" font-size="22" fill="#ffffff">kamel3lom | رندر تخيلي غير معتمد هندسيًا أو إنشائيًا</text>
+  <text x="110" y="994" font-size="22" fill="#f0b14b">تناظر محوري، استقبال واضح، وغرف منظمة.</text>
+</svg>

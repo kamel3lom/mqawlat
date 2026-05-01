@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1050" role="img" aria-label="Concept 3D architectural render">
+  <defs>
+    <linearGradient id="sky-egyptian-villa-0200" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0c1b2b"/>
+      <stop offset="1" stop-color="#d9e3ee"/>
+    </linearGradient>
+    <filter id="shadow-egyptian-villa-0200" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#000" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1050" fill="url(#sky-egyptian-villa-0200)"/>
+  <circle cx="1290" cy="180" r="74" fill="#f0b14b" opacity=".74"/>
+  <ellipse cx="820" cy="780" rx="620" ry="130" fill="#07111f" opacity=".28"/>
+  <g filter="url(#shadow-egyptian-villa-0200)"><g>
+      <polygon points="820.0,159.7 909.5,206.0 832.5,245.8 743.0,199.5" fill="#9b6b3c" stroke="#101820" stroke-width="2"/>
+      <polygon points="909.5,206.0 909.5,306.3 832.5,346.1 832.5,245.8" fill="#e6d8c6" stroke="#101820" stroke-width="2"/>
+      <polygon points="832.5,245.8 832.5,346.1 743.0,299.8 743.0,199.5" fill="#efe1cf" stroke="#101820" stroke-width="2"/>
+      <rect x="784.3" y="166.8" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="826.3" y="184.8" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">مجلس</text>
+    </g><g>
+      <polygon points="936.0,218.6 1026.6,265.4 948.7,305.7 858.1,258.8" fill="#9b6b3c" stroke="#101820" stroke-width="2"/>
+      <polygon points="1026.6,265.4 1026.6,366.8 948.7,407.1 948.7,305.7" fill="#e6d8c6" stroke="#101820" stroke-width="2"/>
+      <polygon points="948.7,305.7 948.7,407.1 858.1,360.3 858.1,258.8" fill="#efe1cf" stroke="#101820" stroke-width="2"/>
+      <rect x="900.3" y="226.1" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="942.3" y="244.1" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">صالة عائلي</text>
+    </g><g>
+      <polygon points="1052.0,291.2 1130.1,331.6 1062.9,366.4 984.8,325.9" fill="#9b6b3c" stroke="#101820" stroke-width="2"/>
+      <polygon points="1130.1,331.6 1130.1,420.4 1062.9,455.2 1062.9,366.4" fill="#e6d8c6" stroke="#101820" stroke-width="2"/>
+      <polygon points="1062.9,366.4 1062.9,455.2 984.8,414.7 984.8,325.9" fill="#efe1cf" stroke="#101820" stroke-width="2"/>
+      <rect x="1015.5" y="292.8" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="1057.5" y="310.8" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">ثلاث غرف ن</text>
+    </g><g>
+      <polygon points="718.5,232.9 786.2,267.9 728.0,298.0 660.3,263.0" fill="#9b6b3c" stroke="#101820" stroke-width="2"/>
+      <polygon points="786.2,267.9 786.2,347.5 728.0,377.6 728.0,298.0" fill="#e6d8c6" stroke="#101820" stroke-width="2"/>
+      <polygon points="728.0,298.0 728.0,377.6 660.3,342.6 660.3,263.0" fill="#efe1cf" stroke="#101820" stroke-width="2"/>
+      <rect x="681.2" y="229.4" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="723.2" y="247.4" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">طعام</text>
+    </g><g>
+      <polygon points="834.5,291.8 903.5,327.5 844.2,358.2 775.1,322.5" fill="#9b6b3c" stroke="#101820" stroke-width="2"/>
+      <polygon points="903.5,327.5 903.5,408.2 844.2,438.9 844.2,358.2" fill="#e6d8c6" stroke="#101820" stroke-width="2"/>
+      <polygon points="844.2,358.2 844.2,438.9 775.1,403.2 775.1,322.5" fill="#efe1cf" stroke="#101820" stroke-width="2"/>
+      <rect x="797.3" y="289.0" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="839.3" y="307.0" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">مطبخ</text>
+    </g><g>
+      <polygon points="950.5,364.4 1014.3,397.4 959.4,425.8 895.6,392.8" fill="#9b6b3c" stroke="#101820" stroke-width="2"/>
+      <polygon points="1014.3,397.4 1014.3,465.5 959.4,493.9 959.4,425.8" fill="#e6d8c6" stroke="#101820" stroke-width="2"/>
+      <polygon points="959.4,425.8 959.4,493.9 895.6,460.9 895.6,392.8" fill="#efe1cf" stroke="#101820" stroke-width="2"/>
+      <rect x="913.0" y="359.1" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="955.0" y="377.1" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">ثلاثة حمام</text>
+    </g><g>
+      <polygon points="617.0,290.0 680.8,323.0 625.9,351.4 562.1,318.4" fill="#9b6b3c" stroke="#101820" stroke-width="2"/>
+      <polygon points="680.8,323.0 680.8,398.0 625.9,426.4 625.9,351.4" fill="#e6d8c6" stroke="#101820" stroke-width="2"/>
+      <polygon points="625.9,351.4 625.9,426.4 562.1,393.4 562.1,318.4" fill="#efe1cf" stroke="#101820" stroke-width="2"/>
+      <rect x="579.5" y="284.7" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="621.5" y="302.7" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">فناء</text>
+    </g></g>
+  <rect x="510" y="495" width="28" height="110" fill="#c08a4d" opacity=".58"/><rect x="582" y="495" width="28" height="110" fill="#c08a4d" opacity=".58"/><rect x="654" y="495" width="28" height="110" fill="#c08a4d" opacity=".58"/><rect x="726" y="495" width="28" height="110" fill="#c08a4d" opacity=".58"/><rect x="798" y="495" width="28" height="110" fill="#c08a4d" opacity=".58"/><rect x="870" y="495" width="28" height="110" fill="#c08a4d" opacity=".58"/><rect x="942" y="495" width="28" height="110" fill="#c08a4d" opacity=".58"/>
+  <path d="M330 790 C520 690 1090 680 1280 792" fill="none" stroke="#c08a4d" stroke-width="8" opacity=".75"/>
+  <text x="1490" y="96" text-anchor="end" font-size="44" font-weight="900" fill="#eef5fb">تصور 3D مبدئي - فيلا مصري</text>
+  <text x="1490" y="142" text-anchor="end" font-size="25" fill="#d9e3ee">مبني على قالب 2D: egyptian-villa-0200 | 200-299 م²</text>
+  <rect x="70" y="960" width="1460" height="52" rx="8" fill="#07111f" opacity=".78"/>
+  <text x="1490" y="994" text-anchor="end" font-size="22" fill="#ffffff">kamel3lom | رندر تخيلي غير معتمد هندسيًا أو إنشائيًا</text>
+  <text x="110" y="994" font-size="22" fill="#f0b14b">توزيع عملي، شرفة، ومناطق معيشة واضحة.</text>
+</svg>

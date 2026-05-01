@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1050" role="img" aria-label="Concept 3D architectural render">
+  <defs>
+    <linearGradient id="sky-modern-townhouse-0400" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0c1b2b"/>
+      <stop offset="1" stop-color="#d9e3ee"/>
+    </linearGradient>
+    <filter id="shadow-modern-townhouse-0400" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#000" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1050" fill="url(#sky-modern-townhouse-0400)"/>
+  <circle cx="1290" cy="180" r="74" fill="#f0b14b" opacity=".74"/>
+  <ellipse cx="820" cy="780" rx="620" ry="130" fill="#07111f" opacity=".28"/>
+  <g filter="url(#shadow-modern-townhouse-0400)"><g>
+      <polygon points="820.0,114.9 944.3,179.1 837.4,234.4 713.1,170.1" fill="#26364a" stroke="#101820" stroke-width="2"/>
+      <polygon points="944.3,179.1 944.3,324.3 837.4,379.6 837.4,234.4" fill="#d9e3ee" stroke="#101820" stroke-width="2"/>
+      <polygon points="837.4,234.4 837.4,379.6 713.1,315.3 713.1,170.1" fill="#eef3f8" stroke="#101820" stroke-width="2"/>
+      <rect x="786.7" y="138.6" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="828.7" y="156.6" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">معيشة</text>
+    </g><g>
+      <polygon points="936.0,172.6 1061.8,237.6 953.6,293.6 827.8,228.5" fill="#26364a" stroke="#101820" stroke-width="2"/>
+      <polygon points="1061.8,237.6 1061.8,385.1 953.6,441.0 953.6,293.6" fill="#d9e3ee" stroke="#101820" stroke-width="2"/>
+      <polygon points="953.6,293.6 953.6,441.0 827.8,376.0 827.8,228.5" fill="#eef3f8" stroke="#101820" stroke-width="2"/>
+      <rect x="902.8" y="197.1" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="944.8" y="215.1" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">مجلس</text>
+    </g><g>
+      <polygon points="1052.0,271.6 1148.7,321.6 1065.5,364.6 968.9,314.6" fill="#26364a" stroke="#101820" stroke-width="2"/>
+      <polygon points="1148.7,321.6 1148.7,430.0 1065.5,473.0 1065.5,364.6" fill="#d9e3ee" stroke="#101820" stroke-width="2"/>
+      <polygon points="1065.5,364.6 1065.5,473.0 968.9,423.0 968.9,314.6" fill="#eef3f8" stroke="#101820" stroke-width="2"/>
+      <rect x="1016.8" y="282.1" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="1058.8" y="300.1" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">مطبخ</text>
+    </g><g>
+      <polygon points="718.5,192.7 824.6,247.5 733.4,294.7 627.3,239.8" fill="#26364a" stroke="#101820" stroke-width="2"/>
+      <polygon points="824.6,247.5 824.6,367.4 733.4,414.5 733.4,294.7" fill="#d9e3ee" stroke="#101820" stroke-width="2"/>
+      <polygon points="733.4,294.7 733.4,414.5 627.3,359.7 627.3,239.8" fill="#eef3f8" stroke="#101820" stroke-width="2"/>
+      <rect x="683.9" y="207.7" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="725.9" y="225.7" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">ثلاث غرف ن</text>
+    </g><g>
+      <polygon points="834.5,250.4 942.4,306.1 849.6,354.1 741.7,298.3" fill="#26364a" stroke="#101820" stroke-width="2"/>
+      <polygon points="942.4,306.1 942.4,428.3 849.6,476.3 849.6,354.1" fill="#d9e3ee" stroke="#101820" stroke-width="2"/>
+      <polygon points="849.6,354.1 849.6,476.3 741.7,420.5 741.7,298.3" fill="#eef3f8" stroke="#101820" stroke-width="2"/>
+      <rect x="800.0" y="266.2" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="842.0" y="284.2" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">جناح</text>
+    </g><g>
+      <polygon points="950.5,348.3 1023.6,386.1 960.7,418.6 887.7,380.8" fill="#26364a" stroke="#101820" stroke-width="2"/>
+      <polygon points="1023.6,386.1 1023.6,470.3 960.7,502.8 960.7,418.6" fill="#d9e3ee" stroke="#101820" stroke-width="2"/>
+      <polygon points="960.7,418.6 960.7,502.8 887.7,465.0 887.7,380.8" fill="#eef3f8" stroke="#101820" stroke-width="2"/>
+      <rect x="913.6" y="347.5" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="955.6" y="365.5" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">ثلاثة حمام</text>
+    </g><g>
+      <polygon points="617.0,268.1 703.2,312.8 629.1,351.1 542.8,306.5" fill="#26364a" stroke="#101820" stroke-width="2"/>
+      <polygon points="703.2,312.8 703.2,409.6 629.1,448.0 629.1,351.1" fill="#d9e3ee" stroke="#101820" stroke-width="2"/>
+      <polygon points="629.1,351.1 629.1,448.0 542.8,403.4 542.8,306.5" fill="#eef3f8" stroke="#101820" stroke-width="2"/>
+      <rect x="581.0" y="273.6" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="623.0" y="291.6" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">تراس</text>
+    </g></g>
+  <rect x="500" y="488" width="54" height="120" rx="4" fill="#7dd3fc" opacity=".65"/><rect x="586" y="488" width="54" height="120" rx="4" fill="#7dd3fc" opacity=".65"/><rect x="672" y="488" width="54" height="120" rx="4" fill="#7dd3fc" opacity=".65"/><rect x="758" y="488" width="54" height="120" rx="4" fill="#7dd3fc" opacity=".65"/><rect x="844" y="488" width="54" height="120" rx="4" fill="#7dd3fc" opacity=".65"/><rect x="930" y="488" width="54" height="120" rx="4" fill="#7dd3fc" opacity=".65"/>
+  <path d="M330 790 C520 690 1090 680 1280 792" fill="none" stroke="#e26f24" stroke-width="8" opacity=".75"/>
+  <text x="1490" y="96" text-anchor="end" font-size="44" font-weight="900" fill="#eef5fb">تصور 3D مبدئي - تاون هاوس مودرن</text>
+  <text x="1490" y="142" text-anchor="end" font-size="25" fill="#d9e3ee">مبني على قالب 2D: modern-townhouse-0400 | 400-499 م²</text>
+  <rect x="70" y="960" width="1460" height="52" rx="8" fill="#07111f" opacity=".78"/>
+  <text x="1490" y="994" text-anchor="end" font-size="22" fill="#ffffff">kamel3lom | رندر تخيلي غير معتمد هندسيًا أو إنشائيًا</text>
+  <text x="110" y="994" font-size="22" fill="#f0b14b">مساحات مفتوحة، واجهات زجاجية، وخطوط مستقيمة.</text>
+</svg>

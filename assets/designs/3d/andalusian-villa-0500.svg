@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1050" role="img" aria-label="Concept 3D architectural render">
+  <defs>
+    <linearGradient id="sky-andalusian-villa-0500" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0c1b2b"/>
+      <stop offset="1" stop-color="#d9e3ee"/>
+    </linearGradient>
+    <filter id="shadow-andalusian-villa-0500" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#000" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1050" fill="url(#sky-andalusian-villa-0500)"/>
+  <circle cx="1290" cy="180" r="74" fill="#f0b14b" opacity=".74"/>
+  <ellipse cx="820" cy="780" rx="620" ry="130" fill="#07111f" opacity=".28"/>
+  <g filter="url(#shadow-andalusian-villa-0500)"><g>
+      <polygon points="820.0,90.0 960.2,162.5 839.6,224.8 699.5,152.3" fill="#b75536" stroke="#101820" stroke-width="2"/>
+      <polygon points="960.2,162.5 960.2,332.5 839.6,394.8 839.6,224.8" fill="#efe4c8" stroke="#101820" stroke-width="2"/>
+      <polygon points="839.6,224.8 839.6,394.8 699.5,322.3 699.5,152.3" fill="#f4ead3" stroke="#101820" stroke-width="2"/>
+      <rect x="787.8" y="121.4" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="829.8" y="139.4" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">مجلس</text>
+    </g><g>
+      <polygon points="936.0,210.5 1033.6,261.0 949.7,304.4 852.0,253.9" fill="#b75536" stroke="#101820" stroke-width="2"/>
+      <polygon points="1033.6,261.0 1033.6,370.5 949.7,413.9 949.7,304.4" fill="#efe4c8" stroke="#101820" stroke-width="2"/>
+      <polygon points="949.7,304.4 949.7,413.9 852.0,363.4 852.0,253.9" fill="#f4ead3" stroke="#101820" stroke-width="2"/>
+      <rect x="900.8" y="221.5" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="942.8" y="239.5" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">صالتان</text>
+    </g><g>
+      <polygon points="1052.0,242.9 1170.8,304.3 1068.6,357.2 949.8,295.7" fill="#b75536" stroke="#101820" stroke-width="2"/>
+      <polygon points="1170.8,304.3 1170.8,441.4 1068.6,494.3 1068.6,357.2" fill="#efe4c8" stroke="#101820" stroke-width="2"/>
+      <polygon points="1068.6,357.2 1068.6,494.3 949.8,432.8 949.8,295.7" fill="#f4ead3" stroke="#101820" stroke-width="2"/>
+      <rect x="1018.3" y="264.0" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="1060.3" y="282.0" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">أربع غرف ن</text>
+    </g><g>
+      <polygon points="1168.0,300.6 1288.4,362.9 1184.9,416.4 1064.5,354.2" fill="#b75536" stroke="#101820" stroke-width="2"/>
+      <polygon points="1288.4,362.9 1288.4,502.3 1184.9,555.8 1184.9,416.4" fill="#efe4c8" stroke="#101820" stroke-width="2"/>
+      <polygon points="1184.9,416.4 1184.9,555.8 1064.5,493.6 1064.5,354.2" fill="#f4ead3" stroke="#101820" stroke-width="2"/>
+      <rect x="1134.4" y="322.5" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="1176.4" y="340.5" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">جناح رئيسي</text>
+    </g><g>
+      <polygon points="718.5,194.9 822.8,248.9 733.1,295.3 628.8,241.3" fill="#b75536" stroke="#101820" stroke-width="2"/>
+      <polygon points="822.8,248.9 822.8,366.4 733.1,412.8 733.1,295.3" fill="#efe4c8" stroke="#101820" stroke-width="2"/>
+      <polygon points="733.1,295.3 733.1,412.8 628.8,358.9 628.8,241.3" fill="#f4ead3" stroke="#101820" stroke-width="2"/>
+      <rect x="683.8" y="209.1" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="725.8" y="227.1" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">طعام</text>
+    </g><g>
+      <polygon points="834.5,252.7 940.6,307.5 849.4,354.7 743.3,299.8" fill="#b75536" stroke="#101820" stroke-width="2"/>
+      <polygon points="940.6,307.5 940.6,427.4 849.4,474.5 849.4,354.7" fill="#efe4c8" stroke="#101820" stroke-width="2"/>
+      <polygon points="849.4,354.7 849.4,474.5 743.3,419.7 743.3,299.8" fill="#f4ead3" stroke="#101820" stroke-width="2"/>
+      <rect x="799.9" y="267.7" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="841.9" y="285.7" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">مطبخ</text>
+    </g><g>
+      <polygon points="950.5,341.4 1031.0,383.0 961.8,418.9 881.3,377.2" fill="#b75536" stroke="#101820" stroke-width="2"/>
+      <polygon points="1031.0,383.0 1031.0,474.1 961.8,510.0 961.8,418.9" fill="#efe4c8" stroke="#101820" stroke-width="2"/>
+      <polygon points="961.8,418.9 961.8,510.0 881.3,468.3 881.3,377.2" fill="#f4ead3" stroke="#101820" stroke-width="2"/>
+      <rect x="914.1" y="344.1" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="956.1" y="362.1" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">خدمات</text>
+    </g><g>
+      <polygon points="1066.5,385.3 1162.2,434.8 1079.9,477.3 984.2,427.9" fill="#b75536" stroke="#101820" stroke-width="2"/>
+      <polygon points="1162.2,434.8 1162.2,542.0 1079.9,584.5 1079.9,477.3" fill="#efe4c8" stroke="#101820" stroke-width="2"/>
+      <polygon points="1079.9,477.3 1079.9,584.5 984.2,535.1 984.2,427.9" fill="#f4ead3" stroke="#101820" stroke-width="2"/>
+      <rect x="1031.2" y="395.3" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="1073.2" y="413.3" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">فناء</text>
+    </g></g>
+  <path d="M 520 548 q 32 -70 64 0" fill="none" stroke="#214d5d" stroke-width="10"/><path d="M 612 548 q 32 -70 64 0" fill="none" stroke="#214d5d" stroke-width="10"/><path d="M 704 548 q 32 -70 64 0" fill="none" stroke="#214d5d" stroke-width="10"/><path d="M 796 548 q 32 -70 64 0" fill="none" stroke="#214d5d" stroke-width="10"/><path d="M 888 548 q 32 -70 64 0" fill="none" stroke="#214d5d" stroke-width="10"/>
+  <path d="M330 790 C520 690 1090 680 1280 792" fill="none" stroke="#214d5d" stroke-width="8" opacity=".75"/>
+  <text x="1490" y="96" text-anchor="end" font-size="44" font-weight="900" fill="#eef5fb">تصور 3D مبدئي - فيلا أندلسي</text>
+  <text x="1490" y="142" text-anchor="end" font-size="25" fill="#d9e3ee">مبني على قالب 2D: andalusian-villa-0500 | 500-599 م²</text>
+  <rect x="70" y="960" width="1460" height="52" rx="8" fill="#07111f" opacity=".78"/>
+  <text x="1490" y="994" text-anchor="end" font-size="22" fill="#ffffff">kamel3lom | رندر تخيلي غير معتمد هندسيًا أو إنشائيًا</text>
+  <text x="110" y="994" font-size="22" fill="#f0b14b">قوس مركزي، فناء مائي، وتدرج بين الضيافة والمعيشة.</text>
+</svg>

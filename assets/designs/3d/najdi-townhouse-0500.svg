@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1050" role="img" aria-label="Concept 3D architectural render">
+  <defs>
+    <linearGradient id="sky-najdi-townhouse-0500" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0c1b2b"/>
+      <stop offset="1" stop-color="#d9e3ee"/>
+    </linearGradient>
+    <filter id="shadow-najdi-townhouse-0500" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#000" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1050" fill="url(#sky-najdi-townhouse-0500)"/>
+  <circle cx="1290" cy="180" r="74" fill="#f0b14b" opacity=".74"/>
+  <ellipse cx="820" cy="780" rx="620" ry="130" fill="#07111f" opacity=".28"/>
+  <g filter="url(#shadow-najdi-townhouse-0500)"><g>
+      <polygon points="820.0,90.0 960.8,162.8 839.7,225.5 698.9,152.6" fill="#7a5b31" stroke="#101820" stroke-width="2"/>
+      <polygon points="960.8,162.8 960.8,332.8 839.7,395.5 839.7,225.5" fill="#e7d2a8" stroke="#101820" stroke-width="2"/>
+      <polygon points="839.7,225.5 839.7,395.5 698.9,322.6 698.9,152.6" fill="#d6bc87" stroke="#101820" stroke-width="2"/>
+      <rect x="787.9" y="121.7" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="829.9" y="139.7" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">معيشة</text>
+    </g><g>
+      <polygon points="936.0,150.0 1078.2,223.5 955.9,286.8 813.7,213.2" fill="#7a5b31" stroke="#101820" stroke-width="2"/>
+      <polygon points="1078.2,223.5 1078.2,393.5 955.9,456.8 955.9,286.8" fill="#e7d2a8" stroke="#101820" stroke-width="2"/>
+      <polygon points="955.9,286.8 955.9,456.8 813.7,383.2 813.7,213.2" fill="#d6bc87" stroke="#101820" stroke-width="2"/>
+      <rect x="904.0" y="182.4" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="946.0" y="200.4" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">مجلس</text>
+    </g><g>
+      <polygon points="1052.0,261.3 1157.2,315.7 1066.7,362.5 961.6,308.1" fill="#7a5b31" stroke="#101820" stroke-width="2"/>
+      <polygon points="1157.2,315.7 1157.2,434.4 1066.7,481.2 1066.7,362.5" fill="#e7d2a8" stroke="#101820" stroke-width="2"/>
+      <polygon points="1066.7,362.5 1066.7,481.2 961.6,426.8 961.6,308.1" fill="#d6bc87" stroke="#101820" stroke-width="2"/>
+      <rect x="1017.4" y="275.9" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="1059.4" y="293.9" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">مطبخ</text>
+    </g><g>
+      <polygon points="718.5,173.1 838.9,235.4 735.4,288.9 615.0,226.7" fill="#7a5b31" stroke="#101820" stroke-width="2"/>
+      <polygon points="838.9,235.4 838.9,374.8 735.4,428.3 735.4,288.9" fill="#e7d2a8" stroke="#101820" stroke-width="2"/>
+      <polygon points="735.4,288.9 735.4,428.3 615.0,366.1 615.0,226.7" fill="#d6bc87" stroke="#101820" stroke-width="2"/>
+      <rect x="684.9" y="195.0" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="726.9" y="213.0" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">ثلاث غرف ن</text>
+    </g><g>
+      <polygon points="834.5,236.6 952.5,297.6 851.0,350.1 733.0,289.0" fill="#7a5b31" stroke="#101820" stroke-width="2"/>
+      <polygon points="952.5,297.6 952.5,433.5 851.0,486.0 851.0,350.1" fill="#e7d2a8" stroke="#101820" stroke-width="2"/>
+      <polygon points="851.0,350.1 851.0,486.0 733.0,425.0 733.0,289.0" fill="#d6bc87" stroke="#101820" stroke-width="2"/>
+      <rect x="800.8" y="257.3" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="842.8" y="275.3" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">جناح</text>
+    </g><g>
+      <polygon points="950.5,343.7 1028.6,384.1 961.4,418.9 883.3,378.4" fill="#7a5b31" stroke="#101820" stroke-width="2"/>
+      <polygon points="1028.6,384.1 1028.6,472.9 961.4,507.7 961.4,418.9" fill="#e7d2a8" stroke="#101820" stroke-width="2"/>
+      <polygon points="961.4,418.9 961.4,507.7 883.3,467.2 883.3,378.4" fill="#d6bc87" stroke="#101820" stroke-width="2"/>
+      <rect x="914.0" y="345.3" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="956.0" y="363.3" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">ثلاثة حمام</text>
+    </g><g>
+      <polygon points="617.0,254.3 715.6,305.4 630.8,349.2 532.2,298.2" fill="#7a5b31" stroke="#101820" stroke-width="2"/>
+      <polygon points="715.6,305.4 715.6,416.0 630.8,459.9 630.8,349.2" fill="#e7d2a8" stroke="#101820" stroke-width="2"/>
+      <polygon points="630.8,349.2 630.8,459.9 532.2,408.9 532.2,298.2" fill="#d6bc87" stroke="#101820" stroke-width="2"/>
+      <rect x="581.9" y="265.8" width="84" height="24" rx="12" fill="#ffffff" opacity=".82"/>
+      <text x="623.9" y="283.8" text-anchor="middle" font-size="13" font-weight="800" fill="#102033">تراس</text>
+    </g></g>
+  <path d="M 500 535 l 24 -40 l 24 40 z" fill="#b8874f" opacity=".72"/><path d="M 558 535 l 24 -40 l 24 40 z" fill="#b8874f" opacity=".72"/><path d="M 616 535 l 24 -40 l 24 40 z" fill="#b8874f" opacity=".72"/><path d="M 674 535 l 24 -40 l 24 40 z" fill="#b8874f" opacity=".72"/><path d="M 732 535 l 24 -40 l 24 40 z" fill="#b8874f" opacity=".72"/><path d="M 790 535 l 24 -40 l 24 40 z" fill="#b8874f" opacity=".72"/><path d="M 848 535 l 24 -40 l 24 40 z" fill="#b8874f" opacity=".72"/><path d="M 906 535 l 24 -40 l 24 40 z" fill="#b8874f" opacity=".72"/>
+  <path d="M330 790 C520 690 1090 680 1280 792" fill="none" stroke="#b8874f" stroke-width="8" opacity=".75"/>
+  <text x="1490" y="96" text-anchor="end" font-size="44" font-weight="900" fill="#eef5fb">تصور 3D مبدئي - تاون هاوس نجدي</text>
+  <text x="1490" y="142" text-anchor="end" font-size="25" fill="#d9e3ee">مبني على قالب 2D: najdi-townhouse-0500 | 500-599 م²</text>
+  <rect x="70" y="960" width="1460" height="52" rx="8" fill="#07111f" opacity=".78"/>
+  <text x="1490" y="994" text-anchor="end" font-size="22" fill="#ffffff">kamel3lom | رندر تخيلي غير معتمد هندسيًا أو إنشائيًا</text>
+  <text x="110" y="994" font-size="22" fill="#f0b14b">كتل هادئة، مجلس أمامي، فناء أو ردهة، وفتحات منتظمة.</text>
+</svg>

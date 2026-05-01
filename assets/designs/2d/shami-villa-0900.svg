@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1050" role="img" aria-label="Concept architectural 2D plan">
+  <defs>
+    <pattern id="grid-shami-villa-0900" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#94a3b8" stroke-width="1" opacity=".18"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1050" fill="#f5efe3"/>
+  <rect x="70" y="70" width="1460" height="900" fill="url(#grid-shami-villa-0900)" stroke="#263238" stroke-width="3"/>
+  <text x="1490" y="118" text-anchor="end" font-size="40" font-weight="900" fill="#263238">مخطط معماري مبدئي - فيلا شامي</text>
+  <text x="1490" y="158" text-anchor="end" font-size="24" fill="#263238">الفئة: 900-999 م² | الطوابق: 1-4</text>
+  <path d="M 118 112 q 18 -34 36 0" fill="none" stroke="#7b3f2a" stroke-width="4"/><path d="M 164 112 q 18 -34 36 0" fill="none" stroke="#7b3f2a" stroke-width="4"/><path d="M 210 112 q 18 -34 36 0" fill="none" stroke="#7b3f2a" stroke-width="4"/><path d="M 256 112 q 18 -34 36 0" fill="none" stroke="#7b3f2a" stroke-width="4"/><path d="M 302 112 q 18 -34 36 0" fill="none" stroke="#7b3f2a" stroke-width="4"/><path d="M 348 112 q 18 -34 36 0" fill="none" stroke="#7b3f2a" stroke-width="4"/><path d="M 394 112 q 18 -34 36 0" fill="none" stroke="#7b3f2a" stroke-width="4"/>
+  <g>
+            <g>
+              <rect x="110.0" y="150.0" width="567.7" height="180.0" fill="#f0dfc2" stroke="#263238" stroke-width="8"/>
+              <line x1="132.0" y1="158.0" x2="262.0" y2="158.0" stroke="#8fd4dc" stroke-width="8" stroke-linecap="round"/>
+              <path d="M 168.0 330.0 v -52 a 52 52 0 0 0 52 52" fill="none" stroke="#7b3f2a" stroke-width="4"/>
+              <rect x="132.0" y="180.0" width="160.0" height="42" rx="10" fill="none" stroke="#263238" stroke-width="3"/><rect x="152.0" y="242.0" width="64" height="36" rx="6" fill="none" stroke="#7b3f2a" stroke-width="3"/>
+              <text x="393.8" y="234.0" text-anchor="middle" font-size="30" font-weight="800" fill="#263238">مجلس</text>
+              <text x="393.8" y="268.0" text-anchor="middle" font-size="20" fill="#263238">141 م²</text>
+            </g>
+            
+            <g>
+              <rect x="677.7" y="150.0" width="398.6" height="180.0" fill="#f5efe3" stroke="#263238" stroke-width="8"/>
+              <line x1="699.7" y1="158.0" x2="795.3" y2="158.0" stroke="#8fd4dc" stroke-width="8" stroke-linecap="round"/>
+              <path d="M 758.7 330.0 v -52 a 52 52 0 0 0 52 52" fill="none" stroke="#7b3f2a" stroke-width="4"/>
+              <rect x="699.7" y="180.0" width="120.0" height="62" rx="8" fill="none" stroke="#263238" stroke-width="3"/><line x1="699.7" y1="208.0" x2="819.7" y2="208.0" stroke="#263238" stroke-width="2"/>
+              <text x="876.9" y="234.0" text-anchor="middle" font-size="30" font-weight="800" fill="#263238">جناحان</text>
+              <text x="876.9" y="268.0" text-anchor="middle" font-size="20" fill="#263238">99 م²</text>
+            </g>
+            
+            <g>
+              <rect x="1076.2" y="150.0" width="273.8" height="180.0" fill="#f0dfc2" stroke="#263238" stroke-width="8"/>
+              <line x1="1098.2" y1="158.0" x2="1163.9" y2="158.0" stroke="#8fd4dc" stroke-width="8" stroke-linecap="round"/>
+              <path d="M 1180.2 330.0 v -52 a 52 52 0 0 0 52 52" fill="none" stroke="#7b3f2a" stroke-width="4"/>
+              <rect x="1100.2" y="178.0" width="82.1" height="42" rx="6" fill="none" stroke="#263238" stroke-width="3"/>
+              <text x="1213.1" y="234.0" text-anchor="middle" font-size="30" font-weight="800" fill="#263238">فناء</text>
+              <text x="1213.1" y="268.0" text-anchor="middle" font-size="20" fill="#263238">68 م²</text>
+            </g>
+            
+            <g>
+              <rect x="110.0" y="330.0" width="797.1" height="180.0" fill="#f5efe3" stroke="#263238" stroke-width="8"/>
+              <line x1="132.0" y1="338.0" x2="262.0" y2="338.0" stroke="#8fd4dc" stroke-width="8" stroke-linecap="round"/>
+              <path d="M 237.0 510.0 v -52 a 52 52 0 0 0 52 52" fill="none" stroke="#7b3f2a" stroke-width="4"/>
+              <rect x="132.0" y="360.0" width="160.0" height="42" rx="10" fill="none" stroke="#263238" stroke-width="3"/><rect x="152.0" y="422.0" width="64" height="36" rx="6" fill="none" stroke="#7b3f2a" stroke-width="3"/>
+              <text x="508.6" y="414.0" text-anchor="middle" font-size="30" font-weight="800" fill="#263238">صالة استقبال</text>
+              <text x="508.6" y="448.0" text-anchor="middle" font-size="20" fill="#263238">144 م²</text>
+            </g>
+            
+            <g>
+              <rect x="907.1" y="330.0" width="442.9" height="180.0" fill="#f0dfc2" stroke="#263238" stroke-width="8"/>
+              <line x1="929.1" y1="338.0" x2="1035.4" y2="338.0" stroke="#8fd4dc" stroke-width="8" stroke-linecap="round"/>
+              <path d="M 1057.1 510.0 v -52 a 52 52 0 0 0 52 52" fill="none" stroke="#7b3f2a" stroke-width="4"/>
+              <ellipse cx="1031.1" cy="398.4" rx="54" ry="34" fill="none" stroke="#263238" stroke-width="3"/><circle cx="1031.1" cy="398.4" r="7" fill="#7b3f2a"/>
+              <text x="1128.6" y="414.0" text-anchor="middle" font-size="30" font-weight="800" fill="#263238">طعام</text>
+              <text x="1128.6" y="448.0" text-anchor="middle" font-size="20" fill="#263238">80 م²</text>
+            </g>
+            
+            <g>
+              <rect x="110.0" y="510.0" width="778.5" height="180.0" fill="#f5efe3" stroke="#263238" stroke-width="8"/>
+              <line x1="132.0" y1="518.0" x2="262.0" y2="518.0" stroke="#8fd4dc" stroke-width="8" stroke-linecap="round"/>
+              <path d="M 283.0 690.0 v -52 a 52 52 0 0 0 52 52" fill="none" stroke="#7b3f2a" stroke-width="4"/>
+              <rect x="132.0" y="540.0" width="160.0" height="42" rx="10" fill="none" stroke="#263238" stroke-width="3"/><rect x="152.0" y="602.0" width="64" height="36" rx="6" fill="none" stroke="#7b3f2a" stroke-width="3"/>
+              <text x="499.2" y="594.0" text-anchor="middle" font-size="30" font-weight="800" fill="#263238">صالة عائلية</text>
+              <text x="499.2" y="628.0" text-anchor="middle" font-size="20" fill="#263238">140 م²</text>
+            </g>
+            
+            <g>
+              <rect x="888.5" y="510.0" width="461.5" height="180.0" fill="#d9b27c" stroke="#263238" stroke-width="8"/>
+              <line x1="910.5" y1="518.0" x2="1021.2" y2="518.0" stroke="#8fd4dc" stroke-width="8" stroke-linecap="round"/>
+              <path d="M 1084.5 690.0 v -52 a 52 52 0 0 0 52 52" fill="none" stroke="#7b3f2a" stroke-width="4"/>
+              <rect x="910.5" y="534.0" width="150.0" height="24" fill="none" stroke="#263238" stroke-width="3"/><circle cx="940.5" cy="578.0" r="12" fill="none" stroke="#7b3f2a" stroke-width="3"/><circle cx="976.5" cy="578.0" r="12" fill="none" stroke="#7b3f2a" stroke-width="3"/>
+              <text x="1119.2" y="594.0" text-anchor="middle" font-size="30" font-weight="800" fill="#263238">مطبخ</text>
+              <text x="1119.2" y="628.0" text-anchor="middle" font-size="20" fill="#263238">83 م²</text>
+            </g>
+            
+            <g>
+              <rect x="110.0" y="690.0" width="880.8" height="180.0" fill="#f5efe3" stroke="#263238" stroke-width="8"/>
+              <line x1="132.0" y1="698.0" x2="262.0" y2="698.0" stroke="#8fd4dc" stroke-width="8" stroke-linecap="round"/>
+              <path d="M 329.0 870.0 v -52 a 52 52 0 0 0 52 52" fill="none" stroke="#7b3f2a" stroke-width="4"/>
+              <rect x="132.0" y="720.0" width="120.0" height="62" rx="8" fill="none" stroke="#263238" stroke-width="3"/><line x1="132.0" y1="748.0" x2="252.0" y2="748.0" stroke="#263238" stroke-width="2"/>
+              <text x="550.4" y="774.0" text-anchor="middle" font-size="30" font-weight="800" fill="#263238">خمس غرف نوم</text>
+              <text x="550.4" y="808.0" text-anchor="middle" font-size="20" fill="#263238">103 م²</text>
+            </g>
+            
+            <g>
+              <rect x="990.8" y="690.0" width="359.2" height="180.0" fill="#d9b27c" stroke="#263238" stroke-width="8"/>
+              <line x1="1012.8" y1="698.0" x2="1099.0" y2="698.0" stroke="#8fd4dc" stroke-width="8" stroke-linecap="round"/>
+              <path d="M 1232.8 870.0 v -52 a 52 52 0 0 0 52 52" fill="none" stroke="#7b3f2a" stroke-width="4"/>
+              <rect x="1014.8" y="718.0" width="96.0" height="42" rx="6" fill="none" stroke="#263238" stroke-width="3"/>
+              <text x="1170.4" y="774.0" text-anchor="middle" font-size="30" font-weight="800" fill="#263238">خدمات</text>
+              <text x="1170.4" y="808.0" text-anchor="middle" font-size="20" fill="#263238">42 م²</text>
+            </g>
+            </g>
+  <line x1="110" y1="910" x2="1350" y2="910" stroke="#263238" stroke-width="3"/>
+  <path d="M110 895v30M1350 895v30" stroke="#263238" stroke-width="3"/>
+  <text x="730" y="948" text-anchor="middle" font-size="24" fill="#263238">أبعاد ومساحات تقريبية للتصور فقط</text>
+  <path d="M1450 890 v-92 m0 0 -22 35 m22-35 22 35" stroke="#7b3f2a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1450" y="936" text-anchor="middle" font-size="24" fill="#263238">شمال</text>
+  <rect x="70" y="980" width="1460" height="46" fill="#263238"/>
+  <text x="1490" y="1012" text-anchor="end" font-size="20" fill="#ffffff">kamel3lom | مخطط تخيلي غير معتمد هندسيًا</text>
+  <text x="110" y="1012" font-size="20" fill="#ffffff">shami-villa-0900</text>
+</svg>

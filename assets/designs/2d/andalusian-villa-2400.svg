@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1050" role="img" aria-label="Concept architectural 2D plan">
+  <defs>
+    <pattern id="grid-andalusian-villa-2400" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#94a3b8" stroke-width="1" opacity=".18"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1050" fill="#f7f0dd"/>
+  <rect x="70" y="70" width="1460" height="900" fill="url(#grid-andalusian-villa-2400)" stroke="#19333b" stroke-width="3"/>
+  <text x="1490" y="118" text-anchor="end" font-size="40" font-weight="900" fill="#19333b">مخطط معماري مبدئي - فيلا أندلسي</text>
+  <text x="1490" y="158" text-anchor="end" font-size="24" fill="#19333b">الفئة: 2400-2499 م² | الطوابق: 1-8</text>
+  <rect x="690" y="470" width="145" height="72" rx="36" fill="#83d0c7" opacity=".65" stroke="#214d5d" stroke-width="3"/>
+  <g>
+            <g>
+              <rect x="110.0" y="150.0" width="559.8" height="180.0" fill="#f4ead3" stroke="#19333b" stroke-width="8"/>
+              <line x1="132.0" y1="158.0" x2="262.0" y2="158.0" stroke="#83d0c7" stroke-width="8" stroke-linecap="round"/>
+              <path d="M 168.0 330.0 v -52 a 52 52 0 0 0 52 52" fill="none" stroke="#214d5d" stroke-width="4"/>
+              <rect x="132.0" y="180.0" width="160.0" height="42" rx="10" fill="none" stroke="#19333b" stroke-width="3"/><rect x="152.0" y="242.0" width="64" height="36" rx="6" fill="none" stroke="#214d5d" stroke-width="3"/>
+              <text x="389.9" y="234.0" text-anchor="middle" font-size="30" font-weight="800" fill="#19333b">مجلس كبير</text>
+              <text x="389.9" y="268.0" text-anchor="middle" font-size="20" fill="#19333b">372 م²</text>
+            </g>
+            
+            <g>
+              <rect x="669.8" y="150.0" width="416.8" height="180.0" fill="#f7f0dd" stroke="#19333b" stroke-width="8"/>
+              <line x1="691.8" y1="158.0" x2="791.8" y2="158.0" stroke="#83d0c7" stroke-width="8" stroke-linecap="round"/>
+              <path d="M 750.8 330.0 v -52 a 52 52 0 0 0 52 52" fill="none" stroke="#214d5d" stroke-width="4"/>
+              <rect x="691.8" y="180.0" width="120.0" height="62" rx="8" fill="none" stroke="#19333b" stroke-width="3"/><line x1="691.8" y1="208.0" x2="811.8" y2="208.0" stroke="#19333b" stroke-width="2"/>
+              <text x="878.2" y="234.0" text-anchor="middle" font-size="30" font-weight="800" fill="#19333b">جناحان</text>
+              <text x="878.2" y="268.0" text-anchor="middle" font-size="20" fill="#19333b">277 م²</text>
+            </g>
+            
+            <g>
+              <rect x="1086.7" y="150.0" width="263.3" height="180.0" fill="#f4ead3" stroke="#19333b" stroke-width="8"/>
+              <line x1="1108.7" y1="158.0" x2="1171.9" y2="158.0" stroke="#83d0c7" stroke-width="8" stroke-linecap="round"/>
+              <path d="M 1190.7 330.0 v -52 a 52 52 0 0 0 52 52" fill="none" stroke="#214d5d" stroke-width="4"/>
+              <rect x="1110.7" y="178.0" width="79.0" height="42" rx="6" fill="none" stroke="#19333b" stroke-width="3"/>
+              <text x="1218.3" y="234.0" text-anchor="middle" font-size="30" font-weight="800" fill="#19333b">فناء</text>
+              <text x="1218.3" y="268.0" text-anchor="middle" font-size="20" fill="#19333b">175 م²</text>
+            </g>
+            
+            <g>
+              <rect x="110.0" y="330.0" width="597.2" height="180.0" fill="#f7f0dd" stroke="#19333b" stroke-width="8"/>
+              <line x1="132.0" y1="338.0" x2="262.0" y2="338.0" stroke="#83d0c7" stroke-width="8" stroke-linecap="round"/>
+              <path d="M 237.0 510.0 v -52 a 52 52 0 0 0 52 52" fill="none" stroke="#214d5d" stroke-width="4"/>
+              <rect x="132.0" y="360.0" width="160.0" height="42" rx="10" fill="none" stroke="#19333b" stroke-width="3"/><rect x="152.0" y="422.0" width="64" height="36" rx="6" fill="none" stroke="#214d5d" stroke-width="3"/>
+              <text x="408.6" y="414.0" text-anchor="middle" font-size="30" font-weight="800" fill="#19333b">استقبال</text>
+              <text x="408.6" y="448.0" text-anchor="middle" font-size="20" fill="#19333b">379 م²</text>
+            </g>
+            
+            <g>
+              <rect x="707.2" y="330.0" width="356.1" height="180.0" fill="#f4ead3" stroke="#19333b" stroke-width="8"/>
+              <line x1="729.2" y1="338.0" x2="814.6" y2="338.0" stroke="#83d0c7" stroke-width="8" stroke-linecap="round"/>
+              <path d="M 857.2 510.0 v -52 a 52 52 0 0 0 52 52" fill="none" stroke="#214d5d" stroke-width="4"/>
+              <ellipse cx="806.9" cy="398.4" rx="54" ry="34" fill="none" stroke="#19333b" stroke-width="3"/><circle cx="806.9" cy="398.4" r="7" fill="#214d5d"/>
+              <text x="885.2" y="414.0" text-anchor="middle" font-size="30" font-weight="800" fill="#19333b">طعام</text>
+              <text x="885.2" y="448.0" text-anchor="middle" font-size="20" fill="#19333b">226 م²</text>
+            </g>
+            
+            <g>
+              <rect x="1063.2" y="330.0" width="286.8" height="180.0" fill="#f7f0dd" stroke="#19333b" stroke-width="8"/>
+              <line x1="1085.2" y1="338.0" x2="1154.1" y2="338.0" stroke="#83d0c7" stroke-width="8" stroke-linecap="round"/>
+              <path d="M 1236.2 510.0 v -52 a 52 52 0 0 0 52 52" fill="none" stroke="#214d5d" stroke-width="4"/>
+              <rect x="1087.2" y="358.0" width="86.0" height="42" rx="6" fill="none" stroke="#19333b" stroke-width="3"/>
+              <text x="1206.6" y="414.0" text-anchor="middle" font-size="30" font-weight="800" fill="#19333b">تراس</text>
+              <text x="1206.6" y="448.0" text-anchor="middle" font-size="20" fill="#19333b">182 م²</text>
+            </g>
+            
+            <g>
+              <rect x="110.0" y="510.0" width="569.9" height="180.0" fill="#f4ead3" stroke="#19333b" stroke-width="8"/>
+              <line x1="132.0" y1="518.0" x2="262.0" y2="518.0" stroke="#83d0c7" stroke-width="8" stroke-linecap="round"/>
+              <path d="M 306.0 690.0 v -52 a 52 52 0 0 0 52 52" fill="none" stroke="#214d5d" stroke-width="4"/>
+              <rect x="134.0" y="538.0" width="96.0" height="42" rx="6" fill="none" stroke="#19333b" stroke-width="3"/>
+              <text x="394.9" y="594.0" text-anchor="middle" font-size="30" font-weight="800" fill="#19333b">صالتان</text>
+              <text x="394.9" y="628.0" text-anchor="middle" font-size="20" fill="#19333b">182 م²</text>
+            </g>
+            
+            <g>
+              <rect x="679.9" y="510.0" width="670.1" height="180.0" fill="#efe4c8" stroke="#19333b" stroke-width="8"/>
+              <line x1="701.9" y1="518.0" x2="831.9" y2="518.0" stroke="#83d0c7" stroke-width="8" stroke-linecap="round"/>
+              <path d="M 898.9 690.0 v -52 a 52 52 0 0 0 52 52" fill="none" stroke="#214d5d" stroke-width="4"/>
+              <rect x="701.9" y="534.0" width="150.0" height="24" fill="none" stroke="#19333b" stroke-width="3"/><circle cx="731.9" cy="578.0" r="12" fill="none" stroke="#214d5d" stroke-width="3"/><circle cx="767.9" cy="578.0" r="12" fill="none" stroke="#214d5d" stroke-width="3"/>
+              <text x="1014.9" y="594.0" text-anchor="middle" font-size="30" font-weight="800" fill="#19333b">مطبخان</text>
+              <text x="1014.9" y="628.0" text-anchor="middle" font-size="20" fill="#19333b">214 م²</text>
+            </g>
+            
+            <g>
+              <rect x="110.0" y="690.0" width="851.9" height="180.0" fill="#f4ead3" stroke="#19333b" stroke-width="8"/>
+              <line x1="132.0" y1="698.0" x2="262.0" y2="698.0" stroke="#83d0c7" stroke-width="8" stroke-linecap="round"/>
+              <path d="M 352.0 870.0 v -52 a 52 52 0 0 0 52 52" fill="none" stroke="#214d5d" stroke-width="4"/>
+              <rect x="132.0" y="720.0" width="120.0" height="62" rx="8" fill="none" stroke="#19333b" stroke-width="3"/><line x1="132.0" y1="748.0" x2="252.0" y2="748.0" stroke="#19333b" stroke-width="2"/>
+              <text x="536.0" y="774.0" text-anchor="middle" font-size="30" font-weight="800" fill="#19333b">ست غرف نوم</text>
+              <text x="536.0" y="808.0" text-anchor="middle" font-size="20" fill="#19333b">270 م²</text>
+            </g>
+            
+            <g>
+              <rect x="961.9" y="690.0" width="388.1" height="180.0" fill="#efe4c8" stroke="#19333b" stroke-width="8"/>
+              <line x1="983.9" y1="698.0" x2="1077.1" y2="698.0" stroke="#83d0c7" stroke-width="8" stroke-linecap="round"/>
+              <path d="M 1226.9 870.0 v -52 a 52 52 0 0 0 52 52" fill="none" stroke="#214d5d" stroke-width="4"/>
+              <rect x="985.9" y="718.0" width="96.0" height="42" rx="6" fill="none" stroke="#19333b" stroke-width="3"/>
+              <text x="1156.0" y="774.0" text-anchor="middle" font-size="30" font-weight="800" fill="#19333b">خدمات</text>
+              <text x="1156.0" y="808.0" text-anchor="middle" font-size="20" fill="#19333b">123 م²</text>
+            </g>
+            </g>
+  <line x1="110" y1="910" x2="1350" y2="910" stroke="#19333b" stroke-width="3"/>
+  <path d="M110 895v30M1350 895v30" stroke="#19333b" stroke-width="3"/>
+  <text x="730" y="948" text-anchor="middle" font-size="24" fill="#19333b">أبعاد ومساحات تقريبية للتصور فقط</text>
+  <path d="M1450 890 v-92 m0 0 -22 35 m22-35 22 35" stroke="#214d5d" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1450" y="936" text-anchor="middle" font-size="24" fill="#19333b">شمال</text>
+  <rect x="70" y="980" width="1460" height="46" fill="#19333b"/>
+  <text x="1490" y="1012" text-anchor="end" font-size="20" fill="#ffffff">kamel3lom | مخطط تخيلي غير معتمد هندسيًا</text>
+  <text x="110" y="1012" font-size="20" fill="#ffffff">andalusian-villa-2400</text>
+</svg>
