@@ -1,0 +1,48 @@
+name: Generate design assets
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - scripts/generate_design_templates.py
+      - .github/workflows/generate-design-assets.yml
+      - scripts/.design-assets-trigger
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate 2D and 3D design SVG assets
+        run: python scripts/generate_design_templates.py
+
+      - name: Verify generated asset counts
+        run: |
+          two_d_count="$(find assets/designs/2d -name '*.svg' | wc -l)"
+          three_d_count="$(find assets/designs/3d -name '*.svg' | wc -l)"
+          echo "2D assets: ${two_d_count}"
+          echo "3D assets: ${three_d_count}"
+          test "${two_d_count}" -eq 1500
+          test "${three_d_count}" -eq 1500
+
+      - name: Commit generated design assets
+        run: |
+          if [ -z "$(git status --porcelain -- assets/designs data/design-templates.json)" ]; then
+            echo "No generated asset changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/designs data/design-templates.json
+          git commit -m "Generate 2D and 3D design assets"
+          git push
