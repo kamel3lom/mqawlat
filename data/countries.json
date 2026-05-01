@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "projectInternalName": "kamel3lom",
+    "toolNameAr": "علومكم للمقاولات",
+    "toolNameEn": "Al3lomcom Contracting",
+    "dataMode": "sample-demo",
+    "noticeAr": "هذه النسخة تستخدم بيانات تجريبية قابلة للاستبدال ولا تحتوي على أسعار رسمية موثقة."
+  },
+  "countries": [
+    {
+      "code": "SA",
+      "iso2": "SA",
+      "nameAr": "المملكة العربية السعودية",
+      "nameEn": "Saudi Arabia",
+      "currency": { "code": "SAR", "symbolAr": "ر.س", "symbolEn": "SAR", "decimals": 2 },
+      "regions": ["الرياض", "جدة", "مكة المكرمة", "المدينة المنورة", "الدمام", "الخبر", "أبها", "تبوك"],
+      "tax": { "enabled": true, "labelAr": "ضريبة القيمة المضافة", "rate": 0.15 },
+      "demoPriceNoticeAr": "بعض أسعار السعودية مربوطة بنشرة GASTAT الرسمية، وأي بند موسوم sample/demo يحتاج استبدالًا أو تحققًا قبل الاعتماد.",
+      "dataUpdatePolicyAr": "استبدل الأسعار يدويًا من ملفات JSON أو اربط مصدرًا رسميًا عبر GitHub Actions عند توفره."
+    },
+    {
+      "code": "QA",
+      "iso2": "QA",
+      "nameAr": "قطر",
+      "nameEn": "Qatar",
+      "currency": { "code": "QAR", "symbolAr": "ر.ق", "symbolEn": "QAR", "decimals": 2 },
+      "regions": ["الدوحة", "الريان", "الوكرة", "الخور", "الشمال", "أم صلال"],
+      "tax": { "enabled": false, "labelAr": "ضريبة أو رسوم", "rate": 0 },
+      "demoPriceNoticeAr": "أسعار قطر في هذا الملف تجريبية وتحتاج إلى تحقق رسمي قبل الاستخدام.",
+      "dataUpdatePolicyAr": "تدار الأسعار من ملف prices.json إلى حين توفر مصدر رسمي قابل للقراءة آليًا."
+    },
+    {
+      "code": "BH",
+      "iso2": "BH",
+      "nameAr": "البحرين",
+      "nameEn": "Bahrain",
+      "currency": { "code": "BHD", "symbolAr": "د.ب", "symbolEn": "BHD", "decimals": 3 },
+      "regions": ["المنامة", "المحرق", "الرفاع", "مدينة عيسى", "سترة", "حمد"],
+      "tax": { "enabled": true, "labelAr": "ضريبة القيمة المضافة", "rate": 0.10 },
+      "demoPriceNoticeAr": "أسعار البحرين تجريبية ولا تمثل أسعار السوق الرسمية.",
+      "dataUpdatePolicyAr": "يمكن تحديث الأسعار يدويًا أو من ملف رسمي عند توفره."
+    },
+    {
+      "code": "AE",
+      "iso2": "AE",
+      "nameAr": "الإمارات العربية المتحدة",
+      "nameEn": "United Arab Emirates",
+      "currency": { "code": "AED", "symbolAr": "د.إ", "symbolEn": "AED", "decimals": 2 },
+      "regions": ["أبوظبي", "دبي", "الشارقة", "عجمان", "رأس الخيمة", "الفجيرة", "أم القيوين"],
+      "tax": { "enabled": true, "labelAr": "ضريبة القيمة المضافة", "rate": 0.05 },
+      "demoPriceNoticeAr": "أسعار الإمارات تجريبية ويجب استبدالها ببيانات موثقة قبل الاعتماد.",
+      "dataUpdatePolicyAr": "يتم تحديث الأسعار من ملف JSON أو GitHub Actions لاحقًا."
+    },
+    {
+      "code": "OM",
+      "iso2": "OM",
+      "nameAr": "سلطنة عمان",
+      "nameEn": "Oman",
+      "currency": { "code": "OMR", "symbolAr": "ر.ع", "symbolEn": "OMR", "decimals": 3 },
+      "regions": ["مسقط", "صلالة", "صحار", "نزوى", "صور", "البريمي"],
+      "tax": { "enabled": true, "labelAr": "ضريبة القيمة المضافة", "rate": 0.05 },
+      "demoPriceNoticeAr": "أسعار عمان تجريبية ومعدة لاختبار الحساب فقط.",
+      "dataUpdatePolicyAr": "استبدل القيم داخل prices.json بمصادر عمانية رسمية عند توفرها."
+    },
+    {
+      "code": "KW",
+      "iso2": "KW",
+      "nameAr": "الكويت",
+      "nameEn": "Kuwait",
+      "currency": { "code": "KWD", "symbolAr": "د.ك", "symbolEn": "KWD", "decimals": 3 },
+      "regions": ["مدينة الكويت", "حولي", "الأحمدي", "الفروانية", "الجهراء", "مبارك الكبير"],
+      "tax": { "enabled": false, "labelAr": "ضريبة أو رسوم", "rate": 0 },
+      "demoPriceNoticeAr": "أسعار الكويت تجريبية ولا تمثل أسعارًا رسمية.",
+      "dataUpdatePolicyAr": "يمكن تعديل ملف الأسعار يدويًا أو ربطه بمصدر رسمي لاحقًا."
+    },
+    {
+      "code": "EG",
+      "iso2": "EG",
+      "nameAr": "مصر",
+      "nameEn": "Egypt",
+      "currency": { "code": "EGP", "symbolAr": "ج.م", "symbolEn": "EGP", "decimals": 2 },
+      "regions": ["القاهرة", "الجيزة", "الإسكندرية", "الدقهلية", "الشرقية", "أسيوط", "أسوان"],
+      "tax": { "enabled": true, "labelAr": "ضريبة القيمة المضافة", "rate": 0.14 },
+      "demoPriceNoticeAr": "أسعار مصر تجريبية ويجب استبدالها بأسعار موثقة قبل أي اعتماد.",
+      "dataUpdatePolicyAr": "تحدث الأسعار من ملف الأسعار أو من مصدر رسمي قابل للقراءة لاحقًا."
+    },
+    {
+      "code": "JO",
+      "iso2": "JO",
+      "nameAr": "الأردن",
+      "nameEn": "Jordan",
+      "currency": { "code": "JOD", "symbolAr": "د.أ", "symbolEn": "JOD", "decimals": 3 },
+      "regions": ["عمّان", "إربد", "الزرقاء", "العقبة", "السلط", "الكرك"],
+      "tax": { "enabled": true, "labelAr": "ضريبة المبيعات", "rate": 0.16 },
+      "demoPriceNoticeAr": "أسعار الأردن تجريبية ولا تغني عن تسعير الموردين أو الجداول الرسمية.",
+      "dataUpdatePolicyAr": "استبدل القيم من خلال prices.json أو آلية تحديث موثقة مستقبلًا."
+    }
+  ]
+}

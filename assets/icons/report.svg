@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="تقرير">
+  <path d="M16 6h24l10 10v42H16z" fill="#d9e3ee" stroke="#102033" stroke-width="3"/>
+  <path d="M40 6v12h10" fill="#f0b14b" stroke="#102033" stroke-width="3"/>
+  <path d="M23 28h18M23 37h18M23 46h12" stroke="#102033" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="46" cy="47" r="7" fill="#2dd4bf"/>
+</svg>

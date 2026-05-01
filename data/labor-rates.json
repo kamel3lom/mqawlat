@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "dataMode": "sample-demo",
+    "noticeAr": "أجور العمالة اليومية تجريبية للاختبار فقط ويجب استبدالها ببيانات محلية موثقة."
+  },
+  "laborRates": [
+    {
+      "countryCode": "SA",
+      "country": "المملكة العربية السعودية",
+      "currency": "SAR",
+      "sourceName": "Sample/demo labor table",
+      "sourceUrl": "",
+      "lastUpdated": "2026-04-30",
+      "updateMethod": "يدوي",
+      "sourceReliability": "تجريبي",
+      "roles": {
+        "general_workers": { "dailyRateMin": 120, "dailyRateMax": 220, "averageDailyRate": 170 },
+        "steel_workers": { "dailyRateMin": 170, "dailyRateMax": 300, "averageDailyRate": 235 },
+        "carpenters": { "dailyRateMin": 170, "dailyRateMax": 300, "averageDailyRate": 235 },
+        "electricians": { "dailyRateMin": 190, "dailyRateMax": 340, "averageDailyRate": 265 },
+        "plumbers": { "dailyRateMin": 190, "dailyRateMax": 340, "averageDailyRate": 265 },
+        "finishers": { "dailyRateMin": 160, "dailyRateMax": 320, "averageDailyRate": 240 }
+      }
+    },
+    {
+      "countryCode": "QA",
+      "country": "قطر",
+      "currency": "QAR",
+      "sourceName": "Sample/demo labor table",
+      "sourceUrl": "",
+      "lastUpdated": "2026-04-30",
+      "updateMethod": "يدوي",
+      "sourceReliability": "تجريبي",
+      "roles": {
+        "general_workers": { "dailyRateMin": 130, "dailyRateMax": 240, "averageDailyRate": 185 },
+        "steel_workers": { "dailyRateMin": 185, "dailyRateMax": 330, "averageDailyRate": 258 },
+        "carpenters": { "dailyRateMin": 185, "dailyRateMax": 330, "averageDailyRate": 258 },
+        "electricians": { "dailyRateMin": 210, "dailyRateMax": 365, "averageDailyRate": 288 },
+        "plumbers": { "dailyRateMin": 210, "dailyRateMax": 365, "averageDailyRate": 288 },
+        "finishers": { "dailyRateMin": 175, "dailyRateMax": 345, "averageDailyRate": 260 }
+      }
+    },
+    {
+      "countryCode": "BH",
+      "country": "البحرين",
+      "currency": "BHD",
+      "sourceName": "Sample/demo labor table",
+      "sourceUrl": "",
+      "lastUpdated": "2026-04-30",
+      "updateMethod": "يدوي",
+      "sourceReliability": "تجريبي",
+      "roles": {
+        "general_workers": { "dailyRateMin": 12, "dailyRateMax": 22, "averageDailyRate": 17 },
+        "steel_workers": { "dailyRateMin": 17, "dailyRateMax": 30, "averageDailyRate": 24 },
+        "carpenters": { "dailyRateMin": 17, "dailyRateMax": 30, "averageDailyRate": 24 },
+        "electricians": { "dailyRateMin": 20, "dailyRateMax": 35, "averageDailyRate": 28 },
+        "plumbers": { "dailyRateMin": 20, "dailyRateMax": 35, "averageDailyRate": 28 },
+        "finishers": { "dailyRateMin": 16, "dailyRateMax": 32, "averageDailyRate": 24 }
+      }
+    },
+    {
+      "countryCode": "AE",
+      "country": "الإمارات العربية المتحدة",
+      "currency": "AED",
+      "sourceName": "Sample/demo labor table",
+      "sourceUrl": "",
+      "lastUpdated": "2026-04-30",
+      "updateMethod": "يدوي",
+      "sourceReliability": "تجريبي",
+      "roles": {
+        "general_workers": { "dailyRateMin": 130, "dailyRateMax": 240, "averageDailyRate": 185 },
+        "steel_workers": { "dailyRateMin": 190, "dailyRateMax": 340, "averageDailyRate": 265 },
+        "carpenters": { "dailyRateMin": 190, "dailyRateMax": 340, "averageDailyRate": 265 },
+        "electricians": { "dailyRateMin": 220, "dailyRateMax": 380, "averageDailyRate": 300 },
+        "plumbers": { "dailyRateMin": 220, "dailyRateMax": 380, "averageDailyRate": 300 },
+        "finishers": { "dailyRateMin": 180, "dailyRateMax": 350, "averageDailyRate": 265 }
+      }
+    },
+    {
+      "countryCode": "OM",
+      "country": "سلطنة عمان",
+      "currency": "OMR",
+      "sourceName": "Sample/demo labor table",
+      "sourceUrl": "",
+      "lastUpdated": "2026-04-30",
+      "updateMethod": "يدوي",
+      "sourceReliability": "تجريبي",
+      "roles": {
+        "general_workers": { "dailyRateMin": 10, "dailyRateMax": 19, "averageDailyRate": 14.5 },
+        "steel_workers": { "dailyRateMin": 15, "dailyRateMax": 27, "averageDailyRate": 21 },
+        "carpenters": { "dailyRateMin": 15, "dailyRateMax": 27, "averageDailyRate": 21 },
+        "electricians": { "dailyRateMin": 18, "dailyRateMax": 31, "averageDailyRate": 24.5 },
+        "plumbers": { "dailyRateMin": 18, "dailyRateMax": 31, "averageDailyRate": 24.5 },
+        "finishers": { "dailyRateMin": 14, "dailyRateMax": 28, "averageDailyRate": 21 }
+      }
+    },
+    {
+      "countryCode": "KW",
+      "country": "الكويت",
+      "currency": "KWD",
+      "sourceName": "Sample/demo labor table",
+      "sourceUrl": "",
+      "lastUpdated": "2026-04-30",
+      "updateMethod": "يدوي",
+      "sourceReliability": "تجريبي",
+      "roles": {
+        "general_workers": { "dailyRateMin": 11, "dailyRateMax": 22, "averageDailyRate": 16.5 },
+        "steel_workers": { "dailyRateMin": 16, "dailyRateMax": 31, "averageDailyRate": 23.5 },
+        "carpenters": { "dailyRateMin": 16, "dailyRateMax": 31, "averageDailyRate": 23.5 },
+        "electricians": { "dailyRateMin": 20, "dailyRateMax": 36, "averageDailyRate": 28 },
+        "plumbers": { "dailyRateMin": 20, "dailyRateMax": 36, "averageDailyRate": 28 },
+        "finishers": { "dailyRateMin": 15, "dailyRateMax": 32, "averageDailyRate": 23.5 }
+      }
+    },
+    {
+      "countryCode": "EG",
+      "country": "مصر",
+      "currency": "EGP",
+      "sourceName": "Sample/demo labor table",
+      "sourceUrl": "",
+      "lastUpdated": "2026-04-30",
+      "updateMethod": "يدوي",
+      "sourceReliability": "تجريبي",
+      "roles": {
+        "general_workers": { "dailyRateMin": 350, "dailyRateMax": 650, "averageDailyRate": 500 },
+        "steel_workers": { "dailyRateMin": 500, "dailyRateMax": 900, "averageDailyRate": 700 },
+        "carpenters": { "dailyRateMin": 500, "dailyRateMax": 900, "averageDailyRate": 700 },
+        "electricians": { "dailyRateMin": 600, "dailyRateMax": 1050, "averageDailyRate": 825 },
+        "plumbers": { "dailyRateMin": 600, "dailyRateMax": 1050, "averageDailyRate": 825 },
+        "finishers": { "dailyRateMin": 500, "dailyRateMax": 950, "averageDailyRate": 725 }
+      }
+    },
+    {
+      "countryCode": "JO",
+      "country": "الأردن",
+      "currency": "JOD",
+      "sourceName": "Sample/demo labor table",
+      "sourceUrl": "",
+      "lastUpdated": "2026-04-30",
+      "updateMethod": "يدوي",
+      "sourceReliability": "تجريبي",
+      "roles": {
+        "general_workers": { "dailyRateMin": 18, "dailyRateMax": 32, "averageDailyRate": 25 },
+        "steel_workers": { "dailyRateMin": 24, "dailyRateMax": 45, "averageDailyRate": 34.5 },
+        "carpenters": { "dailyRateMin": 24, "dailyRateMax": 45, "averageDailyRate": 34.5 },
+        "electricians": { "dailyRateMin": 28, "dailyRateMax": 50, "averageDailyRate": 39 },
+        "plumbers": { "dailyRateMin": 28, "dailyRateMax": 50, "averageDailyRate": 39 },
+        "finishers": { "dailyRateMin": 24, "dailyRateMax": 48, "averageDailyRate": 36 }
+      }
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "metadata": {
+    "dataMode": "sample-demo",
+    "noticeAr": "تعريفات المواد عامة وقابلة للتوسعة. الأسعار منفصلة في prices.json."
+  },
+  "materials": [
+    {
+      "id": "rebar",
+      "nameAr": "حديد التسليح",
+      "nameEn": "Reinforcement steel",
+      "category": "العظم",
+      "unitAr": "طن",
+      "unitEn": "ton",
+      "includedFor": ["shell", "full"],
+      "stage": "الأساسات والأعمدة والجسور والأسقف",
+      "tablePriority": 1
+    },
+    {
+      "id": "cement",
+      "nameAr": "الأسمنت",
+      "nameEn": "Cement",
+      "category": "العظم",
+      "unitAr": "كيس",
+      "unitEn": "bag",
+      "includedFor": ["shell", "full"],
+      "stage": "الخرسانة والمباني واللياسة",
+      "tablePriority": 2
+    },
+    {
+      "id": "concrete",
+      "nameAr": "الخرسانة الجاهزة",
+      "nameEn": "Ready-mix concrete",
+      "category": "العظم",
+      "unitAr": "م³",
+      "unitEn": "m3",
+      "includedFor": ["shell", "full"],
+      "stage": "الأساسات والأعمدة والأسقف",
+      "tablePriority": 3
+    },
+    {
+      "id": "blocks",
+      "nameAr": "البلوك",
+      "nameEn": "Blocks",
+      "category": "العظم",
+      "unitAr": "قطعة",
+      "unitEn": "piece",
+      "includedFor": ["shell", "full"],
+      "stage": "المباني",
+      "tablePriority": 4
+    },
+    {
+      "id": "sand",
+      "nameAr": "الرمل",
+      "nameEn": "Sand",
+      "category": "العظم",
+      "unitAr": "م³",
+      "unitEn": "m3",
+      "includedFor": ["shell", "full"],
+      "stage": "الخرسانة والمونة واللياسة",
+      "tablePriority": 5
+    },
+    {
+      "id": "gravel",
+      "nameAr": "الحصى",
+      "nameEn": "Gravel",
+      "category": "العظم",
+      "unitAr": "م³",
+      "unitEn": "m3",
+      "includedFor": ["shell", "full"],
+      "stage": "الخرسانة والردميات",
+      "tablePriority": 6
+    },
+    {
+      "id": "formwork",
+      "nameAr": "الأخشاب والشدات",
+      "nameEn": "Formwork",
+      "category": "العظم",
+      "unitAr": "م²",
+      "unitEn": "m2",
+      "includedFor": ["shell", "full"],
+      "stage": "الأعمدة والأسقف",
+      "tablePriority": 7
+    },
+    {
+      "id": "waterproofing",
+      "nameAr": "مواد العزل المائي",
+      "nameEn": "Waterproofing",
+      "category": "العزل",
+      "unitAr": "م²",
+      "unitEn": "m2",
+      "includedFor": ["shell", "full"],
+      "stage": "العزل",
+      "tablePriority": 8
+    },
+    {
+      "id": "thermal_insulation",
+      "nameAr": "مواد العزل الحراري",
+      "nameEn": "Thermal insulation",
+      "category": "العزل",
+      "unitAr": "م²",
+      "unitEn": "m2",
+      "includedFor": ["full"],
+      "stage": "العزل وكفاءة الطاقة",
+      "tablePriority": 9
+    },
+    {
+      "id": "paint",
+      "nameAr": "الدهانات",
+      "nameEn": "Paint",
+      "category": "التشطيب",
+      "unitAr": "م²",
+      "unitEn": "m2",
+      "includedFor": ["full"],
+      "stage": "التشطيبات",
+      "tablePriority": 10
+    },
+    {
+      "id": "tiles",
+      "nameAr": "البلاط والسيراميك",
+      "nameEn": "Tiles and ceramic",
+      "category": "التشطيب",
+      "unitAr": "م²",
+      "unitEn": "m2",
+      "includedFor": ["full"],
+      "stage": "التشطيبات",
+      "tablePriority": 11
+    },
+    {
+      "id": "doors",
+      "nameAr": "الأبواب",
+      "nameEn": "Doors",
+      "category": "التشطيب",
+      "unitAr": "باب",
+      "unitEn": "door",
+      "includedFor": ["full"],
+      "stage": "التشطيبات",
+      "tablePriority": 12
+    },
+    {
+      "id": "windows",
+      "nameAr": "النوافذ",
+      "nameEn": "Windows",
+      "category": "التشطيب",
+      "unitAr": "م²",
+      "unitEn": "m2",
+      "includedFor": ["full"],
+      "stage": "التشطيبات",
+      "tablePriority": 13
+    },
+    {
+      "id": "electrical",
+      "nameAr": "الكهرباء",
+      "nameEn": "Electrical works",
+      "category": "الأعمال الكهروميكانيكية",
+      "unitAr": "نقطة",
+      "unitEn": "point",
+      "includedFor": ["full"],
+      "stage": "الكهرباء",
+      "tablePriority": 14
+    },
+    {
+      "id": "plumbing",
+      "nameAr": "السباكة",
+      "nameEn": "Plumbing works",
+      "category": "الأعمال الكهروميكانيكية",
+      "unitAr": "نقطة",
+      "unitEn": "point",
+      "includedFor": ["full"],
+      "stage": "السباكة",
+      "tablePriority": 15
+    },
+    {
+      "id": "sanitary",
+      "nameAr": "الأدوات الصحية",
+      "nameEn": "Sanitary fixtures",
+      "category": "التشطيب",
+      "unitAr": "طقم",
+      "unitEn": "set",
+      "includedFor": ["full"],
+      "stage": "التشطيبات",
+      "tablePriority": 16
+    },
+    {
+      "id": "elevator_system",
+      "nameAr": "تجهيز المصعد",
+      "nameEn": "Elevator system allowance",
+      "category": "إضافات",
+      "unitAr": "مصعد",
+      "unitEn": "elevator",
+      "includedFor": ["shell", "full"],
+      "stage": "الأعمال الخاصة",
+      "tablePriority": 17
+    }
+  ]
+}

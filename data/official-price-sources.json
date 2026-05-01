@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "lastReviewed": "2026-04-30",
+    "noticeAr": "هذا الملف يسجل مصادر رسمية أو شبه رسمية مرشحة لتحديث الأسعار. لا يعني وجود المصدر أن كل مادة في prices.json محدثة آليًا.",
+    "automationPolicyAr": "لا يتم الجلب الآلي إلا من مصدر رسمي قابل للقراءة آليًا أو ملف رسمي يمكن تتبع بنيته."
+  },
+  "sources": [
+    {
+      "countryCode": "SA",
+      "country": "المملكة العربية السعودية",
+      "authorityAr": "الهيئة العامة للإحصاء",
+      "datasetNameAr": "متوسطات أسعار السلع والخدمات APGS",
+      "officialUrl": "https://stats.gov.sa/en/w/apgs",
+      "latestKnownFileUrl": "https://www.stats.gov.sa/documents/20117/2435267/Average%2BPrices%2Bof%2BGoods%2Band%2BServices%2BDecember%2B2025%2BAR_EN.pdf/20c9b563-1978-2996-61c4-3ae749093c18?t=1768453955663",
+      "coverageAr": "حديد، أسمنت، خرسانة جاهزة، بلوك، رمل، كيابل، أخشاب، بلاط وبعض السلع الإنشائية.",
+      "updateMethod": "ملف رسمي PDF شهري، ويمكن تحديثه عبر سكربت GitHub Actions عند تثبيت رابط الإصدار الجديد.",
+      "machineReadableStatus": "PDF رسمي؛ يحتاج Parser.",
+      "statusAr": "مفعل جزئيًا في الأسعار السعودية"
+    },
+    {
+      "countryCode": "SA",
+      "country": "المملكة العربية السعودية",
+      "authorityAr": "الهيئة العامة للإحصاء",
+      "datasetNameAr": "مؤشر تكلفة البناء CCI",
+      "officialUrl": "https://www.stats.gov.sa/en/w/cci",
+      "latestKnownFileUrl": "",
+      "coverageAr": "مؤشر تغير تكاليف البناء للمواد والعمالة والمعدات والطاقة، وليس أسعار وحدات مباشرة لكل مادة.",
+      "updateMethod": "مرجع اتجاهات وتحقق، لا يستخدم كسعر وحدة مباشر.",
+      "machineReadableStatus": "منشورات ومؤشرات",
+      "statusAr": "مرجع داعم"
+    },
+    {
+      "countryCode": "QA",
+      "country": "قطر",
+      "authorityAr": "المجلس الوطني للتخطيط ووزارة التجارة والصناعة",
+      "datasetNameAr": "مؤشرات أسعار/إنتاج وبيانات حكومية مفتوحة مرتبطة بالقطاع",
+      "officialUrl": "https://www.npc.qa/",
+      "latestKnownFileUrl": "https://www.data.gov.qa/",
+      "coverageAr": "لم يتم تأكيد ملف رسمي حديث بأسعار وحدات مواد البناء الأساسية لكل مادة داخل هذا المشروع.",
+      "updateMethod": "يحتاج ربط مصدر رسمي محدد أو إدخال ملف رسمي يدويًا.",
+      "machineReadableStatus": "بحاجة إلى تحقق",
+      "statusAr": "غير مفعل كأسعار وحدات"
+    },
+    {
+      "countryCode": "AE",
+      "country": "الإمارات العربية المتحدة",
+      "authorityAr": "مركز الإحصاء - أبوظبي ودبي للبيانات والإحصاء",
+      "datasetNameAr": "Building Materials Prices / Construction Cost Index",
+      "officialUrl": "https://scad.gov.ae/",
+      "latestKnownFileUrl": "https://www.dubaipulse.gov.ae/data/dsc-statistics/dsc_construction_cost_index_cci-open",
+      "coverageAr": "مؤشرات تكلفة البناء وأسعار مواد البناء حسب الإمارة عند توفر النشرات.",
+      "updateMethod": "يربط لاحقًا حسب مصدر الإمارة ونسق البيانات.",
+      "machineReadableStatus": "مصادر رسمية متعددة؛ تحتاج مواءمة حسب الإمارة.",
+      "statusAr": "مصدر رسمي مرشح"
+    },
+    {
+      "countryCode": "BH",
+      "country": "البحرين",
+      "authorityAr": "بوابة البيانات المفتوحة البحرينية والجهات الإحصائية",
+      "datasetNameAr": "إحصاءات الأسعار والبيانات المفتوحة",
+      "officialUrl": "https://www.data.gov.bh/pages/statistics-page/",
+      "latestKnownFileUrl": "",
+      "coverageAr": "لم يتم تأكيد جدول رسمي حديث بأسعار وحدات مواد البناء داخل المشروع.",
+      "updateMethod": "تحديث يدوي من مصدر رسمي عند تحديده.",
+      "machineReadableStatus": "بحاجة إلى تحقق",
+      "statusAr": "غير مفعل كأسعار وحدات"
+    },
+    {
+      "countryCode": "OM",
+      "country": "سلطنة عمان",
+      "authorityAr": "المركز الوطني للإحصاء والمعلومات",
+      "datasetNameAr": "مؤشرات أسعار المنتجين والاستيراد والتضخم",
+      "officialUrl": "https://www.ncsi.gov.om/",
+      "latestKnownFileUrl": "",
+      "coverageAr": "مؤشرات سعرية عامة؛ لم يتم تأكيد أسعار وحدات تفصيلية لمواد البناء.",
+      "updateMethod": "تحديث يدوي أو Parser عند توفر ملف رسمي مناسب.",
+      "machineReadableStatus": "بحاجة إلى تحقق",
+      "statusAr": "مصدر رسمي مرشح"
+    },
+    {
+      "countryCode": "KW",
+      "country": "الكويت",
+      "authorityAr": "الإدارة المركزية للإحصاء وجهات حكومية",
+      "datasetNameAr": "مؤشرات أسعار الجملة/المستهلك",
+      "officialUrl": "https://www.csb.gov.kw/",
+      "latestKnownFileUrl": "",
+      "coverageAr": "مؤشرات أسعار عامة؛ يحتاج مصدر أسعار وحدات مواد بناء موثق.",
+      "updateMethod": "تحديث يدوي من ملف رسمي عند توفره.",
+      "machineReadableStatus": "بحاجة إلى تحقق",
+      "statusAr": "غير مفعل كأسعار وحدات"
+    },
+    {
+      "countryCode": "EG",
+      "country": "مصر",
+      "authorityAr": "الجهاز المركزي للتعبئة العامة والإحصاء",
+      "datasetNameAr": "النشرة الشهرية لمتوسط أسعار أهم مواد البناء",
+      "officialUrl": "https://censusinfo.capmas.gov.eg/Metadata-en-v4.2/index.php/catalog/Prices-of-building-materials/about",
+      "latestKnownFileUrl": "https://old.capmas.gov.eg/Pages/Publications.aspx?YearID=23615&page_id=5107",
+      "coverageAr": "حديد التسليح، الأسمنت، الأخشاب وبعض مواد البناء في نشرات رسمية.",
+      "updateMethod": "يحتاج تحميل ملف رسمي أو إدخال يدوي بسبب اختلاف طريقة النشر.",
+      "machineReadableStatus": "منشورات رسمية؛ تحتاج Parser.",
+      "statusAr": "مصدر رسمي مرشح"
+    },
+    {
+      "countryCode": "JO",
+      "country": "الأردن",
+      "authorityAr": "وزارة الصناعة والتجارة والتموين ودائرة الإحصاءات العامة",
+      "datasetNameAr": "سقوف سعرية ومؤشرات أسعار مواد البناء",
+      "officialUrl": "https://www.mit.gov.jo/",
+      "latestKnownFileUrl": "https://www.gtd.gov.jo/EN/List/Circulars_of_price_adjustments_due_to_changing_costs",
+      "coverageAr": "قد تتوفر سقوف سعرية أو تعاميم تعديل أسعار لمواد رئيسية مثل الحديد والأسمنت.",
+      "updateMethod": "تحديث يدوي أو Parser عند تحديد ملف دوري.",
+      "machineReadableStatus": "بحاجة إلى ربط محدد",
+      "statusAr": "مصدر رسمي مرشح"
+    }
+  ]
+}

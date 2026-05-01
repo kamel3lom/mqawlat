@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="أسمنت">
+  <path d="M18 24h44l5 36H13z" fill="#cfd8e3" stroke="#102033" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M24 24 30 12h20l6 12" fill="#f0b14b" stroke="#102033" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M27 43h26M30 53h20" stroke="#102033" stroke-width="4" stroke-linecap="round"/>
+</svg>

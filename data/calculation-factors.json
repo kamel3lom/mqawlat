@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "dataMode": "sample-demo",
+    "methodAr": "معاملات تقريبية قابلة للتعديل ولا تمثل حصر كميات هندسيًا معتمدًا.",
+    "lastUpdated": "2026-04-30"
+  },
+  "projectTypeMultipliers": {
+    "villa": { "labelAr": "فيلا", "materials": 1.02, "labor": 1.05, "duration": 1.06 },
+    "house": { "labelAr": "منزل سكني", "materials": 1.0, "labor": 1.0, "duration": 1.0 },
+    "small_building": { "labelAr": "عمارة صغيرة", "materials": 1.14, "labor": 1.12, "duration": 1.16 },
+    "annex": { "labelAr": "ملحق", "materials": 0.92, "labor": 0.9, "duration": 0.88 },
+    "rest_house": { "labelAr": "استراحة", "materials": 0.96, "labor": 0.94, "duration": 0.95 },
+    "simple_commercial": { "labelAr": "مبنى تجاري بسيط", "materials": 1.18, "labor": 1.15, "duration": 1.12 }
+  },
+  "constructionTypes": {
+    "shell": { "labelAr": "عظم بدون تشطيب", "finishRequired": false, "finishCostMultiplier": 0, "durationMultiplier": 0.72 },
+    "full": { "labelAr": "مع التشطيب الكامل", "finishRequired": true, "finishCostMultiplier": 1, "durationMultiplier": 1 }
+  },
+  "finishLevels": {
+    "luxury": {
+      "labelAr": "تشطيب فاخر",
+      "descriptionAr": "مواد عالية الجودة، تكلفة أعلى، مدة أطول، وجودة تنفيذ أعلى.",
+      "costPerSqm": { "SA": 1850, "QA": 1950, "BH": 185, "AE": 1900, "OM": 175, "KW": 165, "EG": 18500, "JO": 390 },
+      "materialMultiplier": 1.28,
+      "laborMultiplier": 1.22,
+      "durationMultiplier": 1.2
+    },
+    "medium": {
+      "labelAr": "تشطيب متوسط",
+      "descriptionAr": "مواد جيدة، تكلفة متوازنة، ومدة مناسبة للسكن.",
+      "costPerSqm": { "SA": 1250, "QA": 1320, "BH": 125, "AE": 1300, "OM": 118, "KW": 112, "EG": 11800, "JO": 260 },
+      "materialMultiplier": 1,
+      "laborMultiplier": 1,
+      "durationMultiplier": 1
+    },
+    "economy": {
+      "labelAr": "تشطيب اقتصادي / منخفض",
+      "descriptionAr": "مواد أقل تكلفة لتقليل الميزانية مع عدم الإخلال بمتطلبات السلامة الأساسية.",
+      "costPerSqm": { "SA": 850, "QA": 900, "BH": 88, "AE": 920, "OM": 82, "KW": 78, "EG": 7900, "JO": 175 },
+      "materialMultiplier": 0.78,
+      "laborMultiplier": 0.86,
+      "durationMultiplier": 0.9
+    }
+  },
+  "countryCostMultipliers": {
+    "SA": { "materials": 1, "labor": 1, "duration": 1 },
+    "QA": { "materials": 1.06, "labor": 1.08, "duration": 1.03 },
+    "BH": { "materials": 1.02, "labor": 1.0, "duration": 1.01 },
+    "AE": { "materials": 1.08, "labor": 1.1, "duration": 1.02 },
+    "OM": { "materials": 0.98, "labor": 0.95, "duration": 1.02 },
+    "KW": { "materials": 1.04, "labor": 1.06, "duration": 1.03 },
+    "EG": { "materials": 0.88, "labor": 0.82, "duration": 1.06 },
+    "JO": { "materials": 0.92, "labor": 0.9, "duration": 1.04 }
+  },
+  "materialQuantityFactors": [
+    { "materialId": "rebar", "basePerSqm": 0.045, "roundTo": 0.01, "appliesTo": ["shell", "full"], "notesAr": "طن لكل متر مربع من إجمالي مساحة البناء. تقدير سكني أولي ولا يغني عن التصميم الإنشائي." },
+    { "materialId": "cement", "basePerSqm": 0.55, "roundTo": 1, "appliesTo": ["shell", "full"], "notesAr": "كيس لكل متر مربع مبني للأعمال غير المشمولة في الخرسانة الجاهزة تقريبًا." },
+    { "materialId": "concrete", "basePerSqm": 0.28, "roundTo": 0.1, "appliesTo": ["shell", "full"], "notesAr": "متر مكعب لكل متر مربع من إجمالي مساحة البناء تقريبًا." },
+    { "materialId": "blocks", "basePerSqm": 13.5, "roundTo": 1, "appliesTo": ["shell", "full"], "notesAr": "قطعة لكل متر مربع مبني تقريبًا." },
+    { "materialId": "sand", "basePerSqm": 0.2, "roundTo": 0.1, "appliesTo": ["shell", "full"], "notesAr": "متر مكعب لكل متر مربع مبني تقريبًا." },
+    { "materialId": "gravel", "basePerSqm": 0.14, "roundTo": 0.1, "appliesTo": ["shell", "full"], "notesAr": "متر مكعب لكل متر مربع مبني تقريبًا." },
+    { "materialId": "formwork", "basePerSqm": 0.48, "roundTo": 0.1, "appliesTo": ["shell", "full"], "notesAr": "متر مربع شدات لكل متر مربع مبني تقريبًا." },
+    { "materialId": "waterproofing", "basePerSqm": 0.32, "roundTo": 0.1, "appliesTo": ["shell", "full"], "notesAr": "يشمل عزل أسطح ومناطق رطبة بشكل تقديري." },
+    { "materialId": "thermal_insulation", "basePerSqm": 0.24, "roundTo": 0.1, "appliesTo": ["full"], "notesAr": "تقدير أولي لمواد العزل الحراري." },
+    { "materialId": "paint", "basePerSqm": 2.6, "roundTo": 1, "appliesTo": ["full"], "notesAr": "مسطح دهان داخلي وخارجي تقديري." },
+    { "materialId": "tiles", "basePerSqm": 0.92, "roundTo": 0.1, "appliesTo": ["full"], "notesAr": "مسطح بلاط وسيراميك تقريبي." },
+    { "materialId": "doors", "basePerSqm": 0.012, "roundTo": 1, "appliesTo": ["full"], "notesAr": "عدد أبواب تقريبي حسب المساحة." },
+    { "materialId": "windows", "basePerSqm": 0.11, "roundTo": 0.1, "appliesTo": ["full"], "notesAr": "مسطح نوافذ تقريبي." },
+    { "materialId": "electrical", "basePerSqm": 0.18, "roundTo": 1, "appliesTo": ["full"], "notesAr": "نقاط كهرباء تقديرية." },
+    { "materialId": "plumbing", "basePerSqm": 0.06, "roundTo": 1, "appliesTo": ["full"], "notesAr": "نقاط سباكة تقديرية." },
+    { "materialId": "sanitary", "basePerSqm": 0.018, "roundTo": 1, "appliesTo": ["full"], "notesAr": "أطقم أدوات صحية تقديرية." },
+    { "materialId": "elevator_system", "basePerSqm": 0, "roundTo": 1, "appliesTo": ["shell", "full"], "notesAr": "يضاف فقط عند اختيار وجود مصعد." }
+  ],
+  "specialFeatures": {
+    "basement": {
+      "labelAr": "قبو",
+      "builtAreaMultiplier": 1,
+      "durationDays": 26,
+      "laborMultiplier": 1.12,
+      "materials": { "concrete": 0.18, "rebar": 0.018, "waterproofing": 0.75, "sand": 0.08, "gravel": 0.08 }
+    },
+    "fence": {
+      "labelAr": "سور خارجي",
+      "estimatedHeightMeters": 2.4,
+      "durationDaysPerMeter": 0.06,
+      "materialsPerMeter": { "blocks": 42, "cement": 2.5, "sand": 0.22, "concrete": 0.08, "rebar": 0.008, "paint": 2.2 }
+    },
+    "undergroundTank": {
+      "labelAr": "خزان أرضي",
+      "durationDays": 9,
+      "materials": { "concrete": 14, "rebar": 1.2, "waterproofing": 75, "plumbing": 8 }
+    },
+    "roofTank": {
+      "labelAr": "خزان علوي",
+      "durationDays": 4,
+      "materials": { "concrete": 4, "rebar": 0.35, "waterproofing": 28, "plumbing": 5 }
+    },
+    "elevator": {
+      "labelAr": "مصعد",
+      "durationDays": 14,
+      "materials": { "elevator_system": 1, "concrete": 8, "rebar": 0.7, "electrical": 12 }
+    }
+  },
+  "overheads": {
+    "transportRate": 0.035,
+    "equipmentRate": 0.028,
+    "wasteRate": 0.07,
+    "contingencyRate": 0.08,
+    "minimumEquipmentPerSqm": 18
+  },
+  "laborProductivity": {
+    "roles": {
+      "general_workers": { "labelAr": "عمال البناء", "manDaysPerSqm": 0.18, "minimumWorkers": 2 },
+      "steel_workers": { "labelAr": "عمال الحديد", "manDaysPerSqm": 0.055, "minimumWorkers": 1 },
+      "carpenters": { "labelAr": "النجارون", "manDaysPerSqm": 0.06, "minimumWorkers": 1 },
+      "electricians": { "labelAr": "الكهربائيون", "manDaysPerSqm": 0.035, "minimumWorkers": 0, "fullOnly": true },
+      "plumbers": { "labelAr": "السباكون", "manDaysPerSqm": 0.03, "minimumWorkers": 0, "fullOnly": true },
+      "finishers": { "labelAr": "عمال التشطيب", "manDaysPerSqm": 0.12, "minimumWorkers": 0, "fullOnly": true }
+    }
+  },
+  "durationStages": [
+    { "id": "study_design", "labelAr": "الدراسة والتصميم", "baseDays": 10, "per100Sqm": 1.2, "perFloor": 1, "appliesTo": ["shell", "full"] },
+    { "id": "permits", "labelAr": "التراخيص", "baseDays": 14, "per100Sqm": 0.6, "perFloor": 0.5, "appliesTo": ["shell", "full"] },
+    { "id": "excavation", "labelAr": "الحفر", "baseDays": 5, "per100Sqm": 1.1, "perFloor": 0, "appliesTo": ["shell", "full"] },
+    { "id": "foundations", "labelAr": "الأساسات", "baseDays": 9, "per100Sqm": 1.5, "perFloor": 0.5, "appliesTo": ["shell", "full"] },
+    { "id": "columns_beams", "labelAr": "الأعمدة والجسور", "baseDays": 8, "per100Sqm": 1.3, "perFloor": 2.2, "appliesTo": ["shell", "full"] },
+    { "id": "slabs", "labelAr": "الأسقف", "baseDays": 8, "per100Sqm": 1.4, "perFloor": 2.4, "appliesTo": ["shell", "full"] },
+    { "id": "masonry", "labelAr": "المباني", "baseDays": 7, "per100Sqm": 1.5, "perFloor": 1.2, "appliesTo": ["shell", "full"] },
+    { "id": "mep_rough_in", "labelAr": "الكهرباء والسباكة", "baseDays": 7, "per100Sqm": 1.6, "perFloor": 1, "appliesTo": ["full"] },
+    { "id": "insulation", "labelAr": "العزل", "baseDays": 5, "per100Sqm": 0.8, "perFloor": 0.4, "appliesTo": ["shell", "full"] },
+    { "id": "plaster", "labelAr": "اللياسة", "baseDays": 7, "per100Sqm": 1.6, "perFloor": 0.8, "appliesTo": ["full"] },
+    { "id": "finishes", "labelAr": "التشطيبات", "baseDays": 15, "per100Sqm": 3.2, "perFloor": 1.5, "appliesTo": ["full"] },
+    { "id": "handover", "labelAr": "التسليم", "baseDays": 4, "per100Sqm": 0.4, "perFloor": 0.2, "appliesTo": ["shell", "full"] }
+  ]
+}

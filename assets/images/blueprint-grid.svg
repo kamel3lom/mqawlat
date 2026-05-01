@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="مخطط هندسي">
+  <rect width="1200" height="760" fill="#07111f"/>
+  <g opacity="0.18" stroke="#5fd7d1" stroke-width="1">
+    <path d="M0 80h1200M0 160h1200M0 240h1200M0 320h1200M0 400h1200M0 480h1200M0 560h1200M0 640h1200M0 720h1200"/>
+    <path d="M80 0v760M160 0v760M240 0v760M320 0v760M400 0v760M480 0v760M560 0v760M640 0v760M720 0v760M800 0v760M880 0v760M960 0v760M1040 0v760M1120 0v760"/>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M165 555V210h240v345H165Z" stroke="#f0b14b" stroke-width="7" opacity="0.85"/>
+    <path d="M405 555V285h190v270H405Z" stroke="#d9e3ee" stroke-width="5" opacity="0.7"/>
+    <path d="M220 555V360h120v195M470 555V390h70v165" stroke="#2dd4bf" stroke-width="5" opacity="0.75"/>
+    <path d="M710 560V250h250v310H710Z" stroke="#e26f24" stroke-width="7" opacity="0.82"/>
+    <path d="M760 315h150M760 385h150M760 455h150" stroke="#d9e3ee" stroke-width="4" opacity="0.55"/>
+  </g>
+  <text x="72" y="112" fill="#ffffff" opacity="0.08" font-size="58" font-family="Arial, sans-serif" font-weight="700">kamel3lom</text>
+</svg>

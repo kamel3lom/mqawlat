@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="علومكم للمقاولات: أداة تقديرية لحساب كميات مواد البناء، التكلفة، العمالة، والمدة حسب الدولة ونوع المشروع.">
+  <title>علومكم للمقاولات | Al3lomcom Contracting</title>
+  <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="page-watermark" aria-hidden="true">kamel3lom</div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="علومكم للمقاولات">
+      <img src="assets/icons/logo.svg" alt="">
+      <span>
+        <strong>علومكم للمقاولات</strong>
+        <small>Al3lomcom Contracting</small>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="روابط الموقع">
+      <a href="#calculator">الحساب</a>
+      <a href="#resultsSection">النتائج</a>
+      <a href="#buildingCodePanel">كود البناء</a>
+      <a href="#priceSourcesPanel">مصادر الأسعار</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-backdrop" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow">kamel3lom</p>
+        <h1>علومكم للمقاولات</h1>
+        <p class="hero-copy">أداة تقديرية لحساب كميات مواد البناء، التكلفة، العمالة، والمدة حسب الدولة ونوع المشروع.</p>
+        <div class="hero-actions">
+          <button class="btn primary" id="startButton" type="button">
+            <img src="assets/icons/calculator.svg" alt="">
+            ابدأ الحساب الآن
+          </button>
+          <span class="hero-note">Static Web Application جاهزة لـ GitHub Pages</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="مؤشرات تقديرية">
+        <div class="visual-header">
+          <img src="assets/icons/crane.svg" alt="">
+          <span>لوحة تقدير أولي</span>
+        </div>
+        <div class="visual-grid">
+          <div><strong>8</strong><span>دول</span></div>
+          <div><strong>17</strong><span>مادة</span></div>
+          <div><strong>12</strong><span>مرحلة</span></div>
+          <div><strong>PDF</strong><span>تقرير طباعة</span></div>
+        </div>
+        <div class="visual-line"></div>
+      </div>
+    </section>
+
+    <section class="notice-band" role="note">
+      <strong>تنبيه مهم:</strong>
+      النتائج تقديرية وليست بديلًا عن مهندس أو مكتب هندسي أو حصر كميات معتمد. الأسعار التجريبية يجب استبدالها بأسعار رسمية قبل الاعتماد على التقرير.
+    </section>
+
+    <section class="app-shell" id="calculator">
+      <div class="section-heading">
+        <p class="eyebrow">بيانات المشروع</p>
+        <h2>اختر الدولة وأدخل تفاصيل المشروع</h2>
+      </div>
+
+      <form class="project-form glass-panel" id="projectForm">
+        <div class="form-toolbar">
+          <div>
+            <span class="pill" id="currencyBadge">...</span>
+            <span class="pill muted-pill" id="taxBadge">...</span>
+          </div>
+          <p id="appStatus" class="status" aria-live="polite">جاري تحميل البيانات...</p>
+        </div>
+
+        <div class="form-grid">
+          <label>
+            <span>الدولة</span>
+            <select id="countrySelect" name="countryCode" required></select>
+          </label>
+
+          <label>
+            <span>المدينة أو المنطقة</span>
+            <input id="city" name="city" list="cityOptions" placeholder="اختر أو اكتب المدينة">
+            <datalist id="cityOptions"></datalist>
+          </label>
+
+          <label>
+            <span>نوع المشروع</span>
+            <select id="projectType" name="projectType" required></select>
+          </label>
+
+          <label>
+            <span>مساحة الأرض بالمتر المربع</span>
+            <input id="landArea" name="landArea" type="number" min="1" step="1" value="500" required>
+          </label>
+
+          <label>
+            <span>مساحة البناء بالمتر المربع</span>
+            <input id="builtArea" name="builtArea" type="number" min="1" step="1" value="300" required>
+          </label>
+
+          <label>
+            <span>طريقة إدخال مساحة البناء</span>
+            <select id="builtAreaMode" name="builtAreaMode">
+              <option value="total" selected>إجمالي مساحة البناء</option>
+              <option value="per_floor">مساحة كل طابق</option>
+            </select>
+          </label>
+
+          <label>
+            <span>عدد الطوابق</span>
+            <input id="floors" name="floors" type="number" min="1" step="1" value="1" required>
+          </label>
+        </div>
+
+        <fieldset class="toggle-grid">
+          <legend>الإضافات</legend>
+          <label class="switch-card">
+            <input id="basement" name="basement" type="checkbox">
+            <span>يوجد قبو</span>
+          </label>
+          <label class="switch-card">
+            <input id="fence" name="fence" type="checkbox">
+            <span>يوجد سور خارجي</span>
+          </label>
+          <label class="switch-card">
+            <input id="undergroundTank" name="undergroundTank" type="checkbox">
+            <span>يوجد خزان أرضي</span>
+          </label>
+          <label class="switch-card">
+            <input id="roofTank" name="roofTank" type="checkbox">
+            <span>يوجد خزان علوي</span>
+          </label>
+          <label class="switch-card">
+            <input id="elevator" name="elevator" type="checkbox">
+            <span>يوجد مصعد</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="choice-grid">
+          <legend>نوع البناء</legend>
+          <label>
+            <input type="radio" name="constructionType" value="shell" checked>
+            <span>عظم بدون تشطيب</span>
+          </label>
+          <label>
+            <input type="radio" name="constructionType" value="full">
+            <span>مع التشطيب الكامل</span>
+          </label>
+        </fieldset>
+
+        <div class="form-grid compact" id="finishLevelWrapper" hidden>
+          <label>
+            <span>مستوى التشطيب</span>
+            <select id="finishLevel" name="finishLevel"></select>
+          </label>
+        </div>
+
+        <div class="demo-warning" id="dataNotice"></div>
+
+        <div class="action-row">
+          <button class="btn primary" type="submit">
+            <img src="assets/icons/calculator.svg" alt="">
+            احسب الآن
+          </button>
+          <button class="btn secondary" id="restoreButton" type="button">استرجاع آخر مشروع</button>
+          <button class="btn ghost" id="clearButton" type="button">مسح البيانات</button>
+        </div>
+      </form>
+
+      <section class="dual-grid country-context">
+        <div class="panel" id="buildingCodePanel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">كود البناء المرجعي</p>
+              <h3>بيانات مرجعية حسب الدولة</h3>
+            </div>
+          </div>
+          <div id="buildingCodeCard"></div>
+        </div>
+
+        <div class="panel" id="priceSourcesPanel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">مصادر الأسعار</p>
+              <h3>حالة بيانات الأسعار</h3>
+            </div>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>المصدر</th>
+                  <th>آخر تحديث</th>
+                  <th>طريقة التحديث</th>
+                  <th>الموثوقية</th>
+                  <th>نوع البيانات</th>
+                </tr>
+              </thead>
+              <tbody id="sourceRows"></tbody>
+            </table>
+          </div>
+          <div class="official-source-list" id="officialSourceCards"></div>
+        </div>
+      </section>
+    </section>
+
+    <section class="results-shell" id="resultsSection" hidden>
+      <div class="section-heading">
+        <p class="eyebrow">لوحة النتائج</p>
+        <h2>تقدير أولي للتكلفة والكميات والمدة</h2>
+      </div>
+
+      <div class="summary-grid" id="summaryCards"></div>
+      <div class="result-warnings" id="resultWarnings"></div>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">أهم المواد</p>
+            <h3>أعلى المواد تكلفة</h3>
+          </div>
+          <img src="assets/icons/steel.svg" alt="">
+        </div>
+        <ul class="top-list" id="topMaterials"></ul>
+      </section>
+
+      <section class="panel table-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">جدول كميات مواد البناء</p>
+            <h3>الكميات والأسعار التقديرية</h3>
+          </div>
+          <img src="assets/icons/cement.svg" alt="">
+        </div>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>اسم المادة</th>
+                <th>الكمية</th>
+                <th>الوحدة</th>
+                <th>سعر الوحدة</th>
+                <th>التكلفة</th>
+                <th>مصدر السعر</th>
+                <th>آخر تحديث</th>
+              </tr>
+            </thead>
+            <tbody id="materialRows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="dual-grid">
+        <div class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">العمالة والمدة</p>
+              <h3>توزيع العمالة</h3>
+            </div>
+            <img src="assets/icons/hardhat.svg" alt="">
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>الدور</th>
+                  <th>العدد</th>
+                  <th>أيام العمل</th>
+                  <th>اليومية</th>
+                  <th>التكلفة</th>
+                </tr>
+              </thead>
+              <tbody id="laborRows"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">مراحل البناء</p>
+              <h3>الجدول الزمني</h3>
+            </div>
+            <img src="assets/icons/report.svg" alt="">
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>المرحلة</th>
+                  <th>المدة</th>
+                </tr>
+              </thead>
+              <tbody id="stageRows"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel report-panel">
+        <div>
+          <p class="eyebrow">تصدير التقرير</p>
+          <h3>تقرير قابل للطباعة يحمل بصمة kamel3lom</h3>
+        </div>
+        <button class="btn primary" id="reportButton" type="button" disabled>
+          <img src="assets/icons/report.svg" alt="">
+          تصدير التقرير
+        </button>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <strong>kamel3lom</strong>
+    <span>Facebook: Kamel Abu Samra</span>
+    <span>X: kamelabusamra</span>
+    <span>Instagram: kamel3lom</span>
+    <span>TikTok: kamel3lom</span>
+    <span>YouTube: al3lomcom</span>
+  </footer>
+
+  <noscript>يجب تفعيل JavaScript لتشغيل أداة علومكم للمقاولات.</noscript>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

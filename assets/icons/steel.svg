@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="حديد">
+  <g fill="none" stroke-linecap="round" stroke-width="7">
+    <path d="M14 22h52" stroke="#d9e3ee"/>
+    <path d="M14 40h52" stroke="#f0b14b"/>
+    <path d="M14 58h52" stroke="#e26f24"/>
+  </g>
+  <path d="M22 17v46M40 17v46M58 17v46" stroke="#102033" stroke-width="3"/>
+</svg>
