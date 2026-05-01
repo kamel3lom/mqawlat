@@ -325,13 +325,13 @@ function renderDesignPlans(result) {
   $("#designPlansPanel").hidden = !plans;
   if (!plans) return;
 
-  $("#designTemplateCount").textContent = `${formatNumber(plans.variantCount, 0)} قالب مخزن`;
+  $("#designTemplateCount").textContent = `${formatNumber(plans.assetCount || plans.variantCount, 0)} ملف مخزن`;
   $("#designNotice").textContent = plans.noticeAr;
 
   $("#plan2dCard").hidden = !plans.twoD;
   if (plans.twoD) {
     $("#plan2dMeta").textContent = `${plans.twoD.designTypeNameAr} | ${plans.twoD.styleNameAr} | ${plans.twoD.area} م²`;
-    $("#plan2dCanvas").innerHTML = plans.twoD.svg;
+    $("#plan2dCanvas").innerHTML = `<img src="${plans.twoD.assetPath}" alt="مخطط 2D ${plans.twoD.classificationAr}" loading="lazy">`;
   } else {
     $("#plan2dCanvas").innerHTML = "";
   }
@@ -339,7 +339,7 @@ function renderDesignPlans(result) {
   $("#plan3dCard").hidden = !plans.threeD;
   if (plans.threeD) {
     $("#plan3dMeta").textContent = `${plans.threeD.designTypeNameAr} | ${plans.threeD.styleNameAr} | ${plans.threeD.area} م²`;
-    $("#plan3dCanvas").innerHTML = plans.threeD.svg;
+    $("#plan3dCanvas").innerHTML = `<img src="${plans.threeD.assetPath}" alt="تصور 3D ${plans.threeD.classificationAr}" loading="lazy">`;
   } else {
     $("#plan3dCanvas").innerHTML = "";
   }

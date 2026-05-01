@@ -67,14 +67,14 @@ export function exportReport(result) {
         result.designPlans.twoD
           ? `<h3>مخطط 2D - ${escapeHtml(result.designPlans.twoD.styleNameAr)}</h3>
              <p>${escapeHtml(result.designPlans.twoD.classificationAr)}</p>
-             <div class="box">${result.designPlans.twoD.svg}</div>`
+             <div class="box"><img src="${escapeHtml(result.designPlans.twoD.assetPath)}" alt="مخطط 2D" style="width:100%;height:auto;"></div>`
           : ""
       }
       ${
         result.designPlans.threeD
           ? `<h3>مخطط 3D - ${escapeHtml(result.designPlans.threeD.styleNameAr)}</h3>
              <p>${escapeHtml(result.designPlans.threeD.classificationAr)}</p>
-             <div class="box">${result.designPlans.threeD.svg}</div>`
+             <div class="box"><img src="${escapeHtml(result.designPlans.threeD.assetPath)}" alt="تصور 3D" style="width:100%;height:auto;"></div>`
           : ""
       }
     `

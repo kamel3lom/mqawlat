@@ -749,7 +749,8 @@ td {
   background: #07111f;
 }
 
-.plan-canvas svg {
+.plan-canvas svg,
+.plan-canvas img {
   display: block;
   width: 100%;
   height: auto;
