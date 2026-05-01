@@ -162,6 +162,32 @@
           </label>
         </div>
 
+        <fieldset class="toggle-grid design-toggle-grid">
+          <legend>مخططات تخيلية اختيارية</legend>
+          <label class="switch-card">
+            <input id="showPlan2d" name="showPlan2d" type="checkbox">
+            <span>إظهار مخطط 2D تخيلي</span>
+          </label>
+          <label class="switch-card">
+            <input id="showPlan3d" name="showPlan3d" type="checkbox">
+            <span>إظهار مخطط 3D تخيلي</span>
+          </label>
+        </fieldset>
+
+        <div class="form-grid compact design-style-grid" id="designStyle2dWrapper" hidden>
+          <label>
+            <span>طراز مخطط 2D</span>
+            <select id="designStyle2d" name="designStyle2d"></select>
+          </label>
+        </div>
+
+        <div class="form-grid compact design-style-grid" id="designStyle3dWrapper" hidden>
+          <label>
+            <span>طراز مخطط 3D</span>
+            <select id="designStyle3d" name="designStyle3d"></select>
+          </label>
+        </div>
+
         <div class="demo-warning" id="dataNotice"></div>
 
         <div class="action-row">
@@ -219,6 +245,33 @@
 
       <div class="summary-grid" id="summaryCards"></div>
       <div class="result-warnings" id="resultWarnings"></div>
+
+      <section class="panel design-panel" id="designPlansPanel" hidden>
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">مخططات تخيلية</p>
+            <h3>تصور 2D و3D حسب المساحة والطراز</h3>
+          </div>
+          <span class="pill muted-pill" id="designTemplateCount">...</span>
+        </div>
+        <p class="muted" id="designNotice"></p>
+        <div class="design-output-grid">
+          <article class="design-output" id="plan2dCard" hidden>
+            <div class="design-output-header">
+              <strong>مخطط 2D</strong>
+              <span id="plan2dMeta"></span>
+            </div>
+            <div class="plan-canvas" id="plan2dCanvas"></div>
+          </article>
+          <article class="design-output" id="plan3dCard" hidden>
+            <div class="design-output-header">
+              <strong>مخطط 3D</strong>
+              <span id="plan3dMeta"></span>
+            </div>
+            <div class="plan-canvas" id="plan3dCanvas"></div>
+          </article>
+        </div>
+      </section>
 
       <section class="panel">
         <div class="panel-heading">

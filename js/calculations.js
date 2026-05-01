@@ -461,6 +461,10 @@ export function sanitizeProjectInput(input) {
     roofTank: Boolean(input.roofTank),
     elevator: Boolean(input.elevator),
     constructionType: input.constructionType || "shell",
-    finishLevel: input.finishLevel || "medium"
+    finishLevel: input.finishLevel || "medium",
+    showPlan2d: Boolean(input.showPlan2d),
+    designStyle2d: input.designStyle2d || "modern",
+    showPlan3d: Boolean(input.showPlan3d),
+    designStyle3d: input.designStyle3d || "modern"
   };
 }

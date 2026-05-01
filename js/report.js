@@ -59,6 +59,26 @@ export function exportReport(result) {
     "sourceReliability",
     (row) => (row.isDemo ? "تجريبي" : "مدخل")
   ]);
+  const designSection = result.designPlans
+    ? `
+      <h2>المخططات التخيلية</h2>
+      <div class="warning">${escapeHtml(result.designPlans.noticeAr)}</div>
+      ${
+        result.designPlans.twoD
+          ? `<h3>مخطط 2D - ${escapeHtml(result.designPlans.twoD.styleNameAr)}</h3>
+             <p>${escapeHtml(result.designPlans.twoD.classificationAr)}</p>
+             <div class="box">${result.designPlans.twoD.svg}</div>`
+          : ""
+      }
+      ${
+        result.designPlans.threeD
+          ? `<h3>مخطط 3D - ${escapeHtml(result.designPlans.threeD.styleNameAr)}</h3>
+             <p>${escapeHtml(result.designPlans.threeD.classificationAr)}</p>
+             <div class="box">${result.designPlans.threeD.svg}</div>`
+          : ""
+      }
+    `
+    : "";
 
   const buildingCode = result.buildingCode
     ? `
@@ -147,6 +167,8 @@ export function exportReport(result) {
     <thead><tr><th>المادة</th><th>الكمية</th><th>الوحدة</th><th>سعر الوحدة</th><th>التكلفة</th><th>المصدر</th><th>آخر تحديث</th></tr></thead>
     <tbody>${materialRows}</tbody>
   </table>
+
+  ${designSection}
 
   <h2>مراحل البناء</h2>
   <table>

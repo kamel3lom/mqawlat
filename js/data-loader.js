@@ -3,6 +3,7 @@ const DATA_PATHS = {
   materials: "data/materials.json",
   prices: "data/prices.json",
   officialPriceSources: "data/official-price-sources.json",
+  designTemplates: "data/design-templates.json",
   buildingCodes: "data/building-codes.json",
   laborRates: "data/labor-rates.json",
   factors: "data/calculation-factors.json"
@@ -41,12 +42,22 @@ function normalizePriceRecords(priceData) {
 }
 
 export async function loadAppData() {
-  const [countriesData, materialsData, pricesData, officialSourcesData, codesData, laborData, factorsData] =
+  const [
+    countriesData,
+    materialsData,
+    pricesData,
+    officialSourcesData,
+    designTemplatesData,
+    codesData,
+    laborData,
+    factorsData
+  ] =
     await Promise.all([
       fetchJson(DATA_PATHS.countries),
       fetchJson(DATA_PATHS.materials),
       fetchJson(DATA_PATHS.prices),
       fetchJson(DATA_PATHS.officialPriceSources),
+      fetchJson(DATA_PATHS.designTemplates),
       fetchJson(DATA_PATHS.buildingCodes),
       fetchJson(DATA_PATHS.laborRates),
       fetchJson(DATA_PATHS.factors)
@@ -61,6 +72,7 @@ export async function loadAppData() {
     pricesMetadata: pricesData.metadata,
     officialPriceSources: officialSourcesData.sources,
     officialPriceSourcesMetadata: officialSourcesData.metadata,
+    designTemplates: designTemplatesData,
     buildingCodes: codesData.buildingCodes,
     buildingCodesMetadata: codesData.metadata,
     laborRates: laborData.laborRates,

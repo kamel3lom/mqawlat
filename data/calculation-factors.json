@@ -7,6 +7,9 @@
   "projectTypeMultipliers": {
     "villa": { "labelAr": "فيلا", "materials": 1.02, "labor": 1.05, "duration": 1.06 },
     "house": { "labelAr": "منزل سكني", "materials": 1.0, "labor": 1.0, "duration": 1.0 },
+    "apartment": { "labelAr": "شقة", "materials": 0.96, "labor": 0.94, "duration": 0.92 },
+    "townhouse": { "labelAr": "تاون هاوس", "materials": 1.0, "labor": 0.98, "duration": 0.96 },
+    "studio": { "labelAr": "استوديو", "materials": 0.82, "labor": 0.78, "duration": 0.75 },
     "small_building": { "labelAr": "عمارة صغيرة", "materials": 1.14, "labor": 1.12, "duration": 1.16 },
     "annex": { "labelAr": "ملحق", "materials": 0.92, "labor": 0.9, "duration": 0.88 },
     "rest_house": { "labelAr": "استراحة", "materials": 0.96, "labor": 0.94, "duration": 0.95 },

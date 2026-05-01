@@ -1,5 +1,6 @@
 import { loadAppData } from "./data-loader.js";
 import { calculateEstimate, sanitizeProjectInput } from "./calculations.js";
+import { createDesignPlans } from "./design-planner.js";
 import { exportReport } from "./report.js";
 
 const STORAGE_KEY = "kamel3lom:last-project";
@@ -52,8 +53,15 @@ function populateFormOptions() {
     .map(([value, item]) => option(value, item.labelAr, value === "medium"))
     .join("");
 
+  const styleOptions = state.data.designTemplates.styles
+    .map((style) => option(style.id, style.nameAr, style.id === "modern"))
+    .join("");
+  $("#designStyle2d").innerHTML = styleOptions;
+  $("#designStyle3d").innerHTML = styleOptions;
+
   renderCountryContext();
   toggleFinishLevel();
+  toggleDesignOptions();
 }
 
 function renderCityOptions(country) {
@@ -168,6 +176,11 @@ function toggleFinishLevel() {
   $("#finishLevel").disabled = !isFull;
 }
 
+function toggleDesignOptions() {
+  $("#designStyle2dWrapper").hidden = !$("#showPlan2d").checked;
+  $("#designStyle3dWrapper").hidden = !$("#showPlan3d").checked;
+}
+
 function readFormInput() {
   const form = $("#projectForm");
   const formData = new FormData(form);
@@ -185,7 +198,11 @@ function readFormInput() {
     roofTank: $("#roofTank").checked,
     elevator: $("#elevator").checked,
     constructionType: formData.get("constructionType"),
-    finishLevel: formData.get("finishLevel")
+    finishLevel: formData.get("finishLevel"),
+    showPlan2d: $("#showPlan2d").checked,
+    designStyle2d: formData.get("designStyle2d"),
+    showPlan3d: $("#showPlan3d").checked,
+    designStyle3d: formData.get("designStyle3d")
   });
 }
 
@@ -209,7 +226,12 @@ function fillForm(input) {
   });
 
   $("#finishLevel").value = input.finishLevel || "medium";
+  $("#showPlan2d").checked = Boolean(input.showPlan2d);
+  $("#designStyle2d").value = input.designStyle2d || "modern";
+  $("#showPlan3d").checked = Boolean(input.showPlan3d);
+  $("#designStyle3d").value = input.designStyle3d || "modern";
   toggleFinishLevel();
+  toggleDesignOptions();
 }
 
 const FEATURE_KEYS = ["basement", "fence", "undergroundTank", "roofTank", "elevator"];
@@ -298,9 +320,35 @@ function renderLaborAndDuration(result) {
     .join("");
 }
 
+function renderDesignPlans(result) {
+  const plans = result.designPlans;
+  $("#designPlansPanel").hidden = !plans;
+  if (!plans) return;
+
+  $("#designTemplateCount").textContent = `${formatNumber(plans.variantCount, 0)} قالب مخزن`;
+  $("#designNotice").textContent = plans.noticeAr;
+
+  $("#plan2dCard").hidden = !plans.twoD;
+  if (plans.twoD) {
+    $("#plan2dMeta").textContent = `${plans.twoD.designTypeNameAr} | ${plans.twoD.styleNameAr} | ${plans.twoD.area} م²`;
+    $("#plan2dCanvas").innerHTML = plans.twoD.svg;
+  } else {
+    $("#plan2dCanvas").innerHTML = "";
+  }
+
+  $("#plan3dCard").hidden = !plans.threeD;
+  if (plans.threeD) {
+    $("#plan3dMeta").textContent = `${plans.threeD.designTypeNameAr} | ${plans.threeD.styleNameAr} | ${plans.threeD.area} م²`;
+    $("#plan3dCanvas").innerHTML = plans.threeD.svg;
+  } else {
+    $("#plan3dCanvas").innerHTML = "";
+  }
+}
+
 function renderResults(result) {
   $("#resultsSection").hidden = false;
   renderSummary(result);
+  renderDesignPlans(result);
   renderMaterialsTable(result);
   renderLaborAndDuration(result);
   renderSources(result.priceSources);
@@ -316,6 +364,7 @@ function calculateAndRender() {
   }
 
   const result = calculateEstimate(input, state.data);
+  result.designPlans = createDesignPlans(input, result, state.data.designTemplates);
   state.result = result;
   localStorage.setItem(
     STORAGE_KEY,
@@ -357,7 +406,11 @@ function clearLocalData() {
     builtAreaMode: "total",
     floors: 1,
     constructionType: "shell",
-    finishLevel: "medium"
+    finishLevel: "medium",
+    showPlan2d: false,
+    designStyle2d: "modern",
+    showPlan3d: false,
+    designStyle3d: "modern"
   });
   state.result = null;
   $("#resultsSection").hidden = true;
@@ -374,6 +427,8 @@ function bindEvents() {
   document.querySelectorAll('input[name="constructionType"]').forEach((radio) => {
     radio.addEventListener("change", toggleFinishLevel);
   });
+  $("#showPlan2d").addEventListener("change", toggleDesignOptions);
+  $("#showPlan3d").addEventListener("change", toggleDesignOptions);
 
   $("#projectForm").addEventListener("submit", (event) => {
     event.preventDefault();
