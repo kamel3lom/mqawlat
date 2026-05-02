@@ -107,8 +107,7 @@ select {
 
 .brand img,
 .panel-heading img,
-.btn img,
-.visual-header img {
+.btn img {
   width: 34px;
   height: 34px;
   flex: 0 0 auto;
@@ -144,11 +143,11 @@ select {
 
 .hero {
   position: relative;
-  min-height: 78vh;
+  min-height: 64vh;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.7fr);
-  gap: clamp(24px, 5vw, 72px);
+  grid-template-columns: minmax(0, 760px);
   align-items: center;
+  justify-content: start;
   padding: clamp(56px, 8vw, 104px) min(5vw, 64px) 48px;
   overflow: hidden;
 }
@@ -199,10 +198,10 @@ select {
   padding-inline-start: 12px;
 }
 
-.hero-visual,
 .glass-panel,
 .panel,
-.metric-card {
+.metric-card,
+.stat-card {
   border: 1px solid var(--line);
   background: var(--panel);
   box-shadow: var(--shadow);
@@ -210,12 +209,6 @@ select {
   border-radius: var(--radius);
 }
 
-.hero-visual {
-  padding: 22px;
-  min-height: 320px;
-}
-
-.visual-header,
 .panel-heading,
 .form-toolbar,
 .action-row,
@@ -226,27 +219,7 @@ select {
   gap: 16px;
 }
 
-.visual-header {
-  color: var(--metal);
-  font-weight: 800;
-}
-
-.visual-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 26px;
-}
-
-.visual-grid div {
-  padding: 18px;
-  min-height: 94px;
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.055);
-  border: 1px solid var(--line);
-}
-
-.visual-grid strong,
+.stat-card strong,
 .metric-card strong {
   display: block;
   color: var(--text);
@@ -254,21 +227,15 @@ select {
   line-height: 1.25;
 }
 
-.visual-grid span,
+.stat-card span,
 .metric-card span,
 .metric-card small,
 .muted {
   color: var(--muted);
 }
 
-.visual-line {
-  height: 8px;
-  margin-top: 26px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--green), var(--gold), var(--orange));
-}
-
 .notice-band,
+.stats-strip,
 .app-shell,
 .results-shell {
   width: min(1180px, calc(100% - 32px));
@@ -282,6 +249,24 @@ select {
   background: rgba(240, 177, 75, 0.12);
   color: #ffe4ae;
   border-radius: var(--radius);
+}
+
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.stat-card {
+  padding: 18px;
+  min-height: 112px;
+}
+
+.stat-card strong {
+  margin-top: 8px;
+  color: var(--green);
+  font-size: 36px;
 }
 
 .app-shell,
@@ -824,6 +809,7 @@ noscript {
 
   .form-grid,
   .summary-grid,
+  .stats-strip,
   .design-output-grid,
   .dual-grid {
     grid-template-columns: 1fr;
@@ -859,7 +845,6 @@ noscript {
     font-size: 18px;
   }
 
-  .visual-grid,
   .choice-grid,
   .toggle-grid,
   .top-list {
@@ -872,7 +857,6 @@ noscript {
   }
 
   .report-panel,
-  .visual-header,
   .panel-heading {
     align-items: flex-start;
     flex-direction: column;

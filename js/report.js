@@ -27,7 +27,7 @@ function tableRows(rows, cells) {
 }
 
 export function exportReport(result) {
-  if (!result) return;
+  if (!result) return false;
   const reportDate = new Intl.DateTimeFormat("ar", {
     dateStyle: "full",
     timeStyle: "short"
@@ -196,9 +196,10 @@ export function exportReport(result) {
   const reportWindow = window.open("", "_blank");
   if (!reportWindow) {
     alert("تعذر فتح نافذة التقرير. اسمح بالنوافذ المنبثقة ثم حاول مرة أخرى.");
-    return;
+    return false;
   }
   reportWindow.document.open();
   reportWindow.document.write(reportHtml);
   reportWindow.document.close();
+  return true;
 }

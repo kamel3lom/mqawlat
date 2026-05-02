@@ -1,4 +1,5 @@
 import { loadAppData } from "./data-loader.js";
+import { initAnalytics, registerCalculatorUse, registerReportDownload } from "./analytics.js";
 import { calculateEstimate, sanitizeProjectInput } from "./calculations.js";
 import { createDesignPlans } from "./design-planner.js";
 import { exportReport } from "./report.js";
@@ -434,6 +435,7 @@ function bindEvents() {
     event.preventDefault();
     try {
       calculateAndRender();
+      registerCalculatorUse();
     } catch (error) {
       setStatus(error.message, "warning");
     }
@@ -441,10 +443,14 @@ function bindEvents() {
 
   $("#restoreButton").addEventListener("click", restoreLastProject);
   $("#clearButton").addEventListener("click", clearLocalData);
-  $("#reportButton").addEventListener("click", () => exportReport(state.result));
+  $("#reportButton").addEventListener("click", () => {
+    if (exportReport(state.result)) registerReportDownload();
+  });
 }
 
 async function init() {
+  initAnalytics();
+
   try {
     state.data = await loadAppData();
     populateFormOptions();
