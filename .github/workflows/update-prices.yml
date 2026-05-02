@@ -1,0 +1,44 @@
+name: Daily official material price update
+
+on:
+  schedule:
+    # Runs daily at 03:15 UTC. Most official construction-price datasets are monthly,
+    # so the daily run checks for new official files without pretending that the
+    # underlying government data changes every day.
+    - cron: "15 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-prices:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install parser dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 pdfplumber
+
+      - name: Update prices from official sources
+        run: python scripts/update_prices.py
+
+      - name: Commit updated price data
+        run: |
+          if git diff --quiet; then
+            echo "No official price changes detected."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/prices.json data/price-update-status.json
+          git commit -m "Update official material price data"
+          git push
