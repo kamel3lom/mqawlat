@@ -1,0 +1,20 @@
+{
+  "lastRunAt": "",
+  "lastSuccessfulRunAt": "",
+  "mode": "official-source-check",
+  "noticeAr": "يعمل التحديث اليومي كفحص دوري للمصادر الرسمية. لا تتحول الأسعار إلى رسمية إلا إذا نجح السكربت في استخراجها من مصدر رسمي قابل للتتبع.",
+  "countries": {
+    "SA": {
+      "status": "partial-official-parser-ready",
+      "source": "GASTAT APGS PDF",
+      "notesAr": "مفعل جزئيًا للمواد المطابقة في نشرة متوسطات أسعار السلع والخدمات السعودية."
+    },
+    "QA": { "status": "not-enabled", "notesAr": "لا يوجد Parser مفعل لمصدر أسعار وحدات رسمي." },
+    "BH": { "status": "not-enabled", "notesAr": "لا يوجد Parser مفعل لمصدر أسعار وحدات رسمي." },
+    "AE": { "status": "not-enabled", "notesAr": "توجد مصادر رسمية مرشحة، لكن لم يتم تفعيل Parser موحد بعد." },
+    "OM": { "status": "not-enabled", "notesAr": "لا يوجد Parser مفعل لمصدر أسعار وحدات رسمي." },
+    "KW": { "status": "not-enabled", "notesAr": "لا يوجد Parser مفعل لمصدر أسعار وحدات رسمي." },
+    "EG": { "status": "not-enabled", "notesAr": "توجد نشرات رسمية مرشحة، لكن لم يتم تفعيل Parser بعد." },
+    "JO": { "status": "not-enabled", "notesAr": "توجد مصادر مرشحة، لكن لم يتم تفعيل Parser بعد." }
+  }
+}
