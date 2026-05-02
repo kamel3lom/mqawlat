@@ -1,4 +1,10 @@
 const FEATURE_KEYS = ["basement", "fence", "undergroundTank", "roofTank", "elevator"];
+const ARCHITECTURAL_STYLE_PROJECTS = new Set(["villa", "house", "rest_house"]);
+const INTERIOR_FINISH_PROJECTS = new Set(["apartment", "townhouse", "studio", "annex"]);
+const FINISHING_MATERIAL_CATEGORY = "التشطيب";
+const ARCHITECTURAL_DURATION_STAGES = new Set(["study_design", "masonry", "plaster", "finishes", "handover"]);
+const INTERIOR_DURATION_STAGES = new Set(["plaster", "finishes"]);
+const INTERIOR_PARTIAL_DURATION_STAGES = new Set(["mep_rough_in"]);
 
 function toNumber(value, fallback = 0) {
   const parsed = Number(value);
@@ -56,11 +62,42 @@ function applyMaterialAdditions({
   });
 }
 
+function applyStyleAdditions({
+  additionsPerSqm,
+  areaSqm,
+  constructionType,
+  materialById,
+  addMaterial,
+  multiplier = 1,
+  sourceType,
+  sourceLabel
+}) {
+  const applied = [];
+  Object.entries(additionsPerSqm || {}).forEach(([materialId, amountPerSqm]) => {
+    const material = materialById.get(materialId);
+    if (!material || !material.includedFor.includes(constructionType)) return;
+
+    const quantity = amountPerSqm * areaSqm * multiplier;
+    if (!Number.isFinite(quantity) || quantity <= 0) return;
+
+    addMaterial(materialId, quantity);
+    applied.push({
+      sourceType,
+      sourceLabel,
+      materialId,
+      quantity
+    });
+  });
+  return applied;
+}
+
 function calculateDuration({
   grossBuiltArea,
   floors,
   constructionType,
   finishLevel,
+  architecturalStyle,
+  interiorFinishType,
   projectMultiplier,
   countryMultiplier,
   factors,
@@ -82,6 +119,16 @@ function calculateDuration({
 
       if (finish && ["mep_rough_in", "plaster", "finishes"].includes(stage.id)) {
         days *= finish.durationMultiplier;
+      }
+
+      if (architecturalStyle && ARCHITECTURAL_DURATION_STAGES.has(stage.id)) {
+        days *= architecturalStyle.durationMultiplier;
+      }
+
+      if (interiorFinishType && INTERIOR_DURATION_STAGES.has(stage.id)) {
+        days *= interiorFinishType.durationMultiplier;
+      } else if (interiorFinishType && INTERIOR_PARTIAL_DURATION_STAGES.has(stage.id)) {
+        days *= 1 + (interiorFinishType.durationMultiplier - 1) * 0.35;
       }
 
       return {
@@ -112,6 +159,8 @@ function calculateLabor({
   durationDays,
   constructionType,
   finishLevel,
+  architecturalStyle,
+  interiorFinishType,
   projectMultiplier,
   countryMultiplier,
   factors,
@@ -136,7 +185,13 @@ function calculateLabor({
     manDays *= projectMultiplier.labor;
     manDays *= countryMultiplier.labor;
     if (hasBasement) manDays *= factors.specialFeatures.basement.laborMultiplier;
+    if (architecturalStyle) manDays *= architecturalStyle.laborMultiplier;
     if (finish && role.fullOnly) manDays *= finish.laborMultiplier;
+    if (interiorFinishType && role.fullOnly) {
+      const roleMultiplier =
+        roleId === "finishers" ? interiorFinishType.laborMultiplier : 1 + (interiorFinishType.laborMultiplier - 1) * 0.35;
+      manDays *= roleMultiplier;
+    }
     manDays += featureIntensity * (role.fullOnly ? 0.4 : 0.7);
 
     const minimumWorkers = role.minimumWorkers || 0;
@@ -179,6 +234,11 @@ export function calculateEstimate(rawInput, data) {
   const projectMultiplier = factors.projectTypeMultipliers[rawInput.projectType] || factors.projectTypeMultipliers.house;
   const countryMultiplier = factors.countryCostMultipliers[countryCode] || { materials: 1, labor: 1, duration: 1 };
   const finish = finishLevel ? factors.finishLevels[finishLevel] : null;
+  const architecturalStyleId = ARCHITECTURAL_STYLE_PROJECTS.has(rawInput.projectType) ? rawInput.architecturalStyle : "";
+  const architecturalStyle = architecturalStyleId ? factors.architecturalStyles?.[architecturalStyleId] || null : null;
+  const interiorFinishTypeId =
+    constructionType === "full" && INTERIOR_FINISH_PROJECTS.has(rawInput.projectType) ? rawInput.interiorFinishType : "";
+  const interiorFinishType = interiorFinishTypeId ? factors.interiorFinishTypes?.[interiorFinishTypeId] || null : null;
 
   const baseBuiltArea = builtAreaMode === "per_floor" ? builtArea * floors : builtArea;
   const typicalFloorArea = Math.max(1, baseBuiltArea / floors);
@@ -215,12 +275,22 @@ export function calculateEstimate(rawInput, data) {
       amount *= finish.materialMultiplier;
     }
 
+    if (
+      interiorFinishType &&
+      material.category === FINISHING_MATERIAL_CATEGORY &&
+      material.includedFor.length === 1 &&
+      material.includedFor[0] === "full"
+    ) {
+      amount *= interiorFinishType.materialMultiplier;
+    }
+
     addMaterial(factor.materialId, amount);
   });
 
   let featureDays = 0;
   let featureIntensity = 0;
   const featureLabels = [];
+  const styleMaterialAdditions = [];
 
   if (rawInput.basement) {
     const feature = factors.specialFeatures.basement;
@@ -274,6 +344,36 @@ export function calculateEstimate(rawInput, data) {
     applyMaterialAdditions({ addMaterial, additions: feature.materials, constructionType, materialById });
   }
 
+  if (architecturalStyle) {
+    styleMaterialAdditions.push(
+      ...applyStyleAdditions({
+        additionsPerSqm: architecturalStyle.additionsPerSqm,
+        areaSqm: grossBuiltArea,
+        constructionType,
+        materialById,
+        addMaterial,
+        multiplier: architecturalStyle.materialMultiplier,
+        sourceType: "architecturalStyle",
+        sourceLabel: architecturalStyle.labelAr
+      })
+    );
+  }
+
+  if (interiorFinishType) {
+    styleMaterialAdditions.push(
+      ...applyStyleAdditions({
+        additionsPerSqm: interiorFinishType.additionsPerSqm,
+        areaSqm: grossBuiltArea,
+        constructionType,
+        materialById,
+        addMaterial,
+        multiplier: interiorFinishType.materialMultiplier,
+        sourceType: "interiorFinishType",
+        sourceLabel: interiorFinishType.labelAr
+      })
+    );
+  }
+
   const materialRows = Array.from(quantities.entries())
     .map(([materialId, rawQuantity]) => {
       const material = materialById.get(materialId);
@@ -306,12 +406,15 @@ export function calculateEstimate(rawInput, data) {
     .sort((a, b) => a.tablePriority - b.tablePriority);
 
   const materialCost = roundMoney(materialRows.reduce((sum, row) => sum + row.cost, 0));
-  const shellMaterialCost = roundMoney(
-    materialRows
-      .filter((row) => !["التشطيب", "الأعمال الكهروميكانيكية"].includes(row.category))
-      .reduce((sum, row) => sum + row.cost, 0)
-  );
-  const finishingMaterialCost = roundMoney(materialCost - shellMaterialCost);
+  const shellMaterialCost =
+    constructionType === "shell"
+      ? materialCost
+      : roundMoney(
+          materialRows
+            .filter((row) => !["التشطيب", "الأعمال الكهروميكانيكية"].includes(row.category))
+            .reduce((sum, row) => sum + row.cost, 0)
+        );
+  const finishingMaterialCost = constructionType === "full" ? roundMoney(materialCost - shellMaterialCost) : 0;
   const finishAllowance =
     constructionType === "full" && finish
       ? roundMoney(grossBuiltArea * finish.costPerSqm[countryCode] * projectMultiplier.materials)
@@ -322,6 +425,8 @@ export function calculateEstimate(rawInput, data) {
     floors,
     constructionType,
     finishLevel,
+    architecturalStyle,
+    interiorFinishType,
     projectMultiplier,
     countryMultiplier,
     factors,
@@ -334,6 +439,8 @@ export function calculateEstimate(rawInput, data) {
     durationDays: duration.totalDays,
     constructionType,
     finishLevel,
+    architecturalStyle,
+    interiorFinishType,
     projectMultiplier,
     countryMultiplier,
     factors,
@@ -385,6 +492,40 @@ export function calculateEstimate(rawInput, data) {
     demoMaterialCount > 0
       ? `يحتوي التقرير على ${demoMaterialCount} بند أسعار تجريبي و${officialMaterialCount} بند غير تجريبي. يجب استبدال البنود التجريبية أو توثيقها قبل الاعتماد.`
       : "كل بنود الأسعار المستخدمة في هذا التقرير موسومة كمصادر غير تجريبية داخل قاعدة البيانات، مع بقاء الكميات تقديرية وتحتاج مراجعة هندسية.";
+  const styleMaterialRows = styleMaterialAdditions.map((addition) => {
+    const material = materialById.get(addition.materialId);
+    const quantityFactor = quantityFactorById.get(addition.materialId);
+    const priceRecord = priceMap.get(addition.materialId);
+    const quantity = roundQuantity(addition.quantity, quantityFactor?.roundTo || 0.01);
+    const unitPrice = priceRecord?.averagePrice || 0;
+
+    return {
+      ...addition,
+      sourceLabel:
+        addition.sourceType === "architecturalStyle"
+          ? `تصميم ${addition.sourceLabel}`
+          : `تشطيب داخلي ${addition.sourceLabel}`,
+      nameAr: material?.nameAr || priceRecord?.materialName || addition.materialId,
+      unit: material?.unitAr || priceRecord?.unit || "",
+      quantity,
+      unitPrice,
+      cost: roundMoney(quantity * unitPrice)
+    };
+  });
+  const styleWarnings = [];
+  if (architecturalStyle) {
+    styleWarnings.push(
+      `تم تطبيق معاملات تصميم ${architecturalStyle.labelAr} على المواد الإضافية والعمالة ومراحل التنفيذ ذات الصلة.`
+    );
+  }
+  if (interiorFinishType) {
+    styleWarnings.push(
+      `تم تطبيق معاملات تشطيب داخلي ${interiorFinishType.labelAr} على مواد التشطيب والعمالة ومراحل التشطيب عند حساب مشروع كامل التشطيب.`
+    );
+  }
+  if (styleWarnings.length) {
+    styleWarnings.push("معاملات التصميم والتشطيب تقديرية وقابلة للمراجعة الهندسية حسب المخططات والمواصفات الفعلية.");
+  }
 
   return {
     generatedAt: new Date().toISOString(),
@@ -396,6 +537,8 @@ export function calculateEstimate(rawInput, data) {
       floors,
       constructionType,
       finishLevel,
+      architecturalStyle: architecturalStyle ? architecturalStyleId : "",
+      interiorFinishType: interiorFinishType ? interiorFinishTypeId : "",
       featureLabels
     },
     country,
@@ -419,6 +562,31 @@ export function calculateEstimate(rawInput, data) {
     duration,
     buildingCode,
     priceSources,
+    styleEffects: {
+      architecturalStyle: architecturalStyle
+        ? {
+            id: architecturalStyleId,
+            labelAr: architecturalStyle.labelAr,
+            descriptionAr: architecturalStyle.descriptionAr,
+            notesAr: architecturalStyle.notesAr || "",
+            materialMultiplier: architecturalStyle.materialMultiplier,
+            laborMultiplier: architecturalStyle.laborMultiplier,
+            durationMultiplier: architecturalStyle.durationMultiplier
+          }
+        : null,
+      interiorFinishType: interiorFinishType
+        ? {
+            id: interiorFinishTypeId,
+            labelAr: interiorFinishType.labelAr,
+            descriptionAr: interiorFinishType.descriptionAr,
+            notesAr: interiorFinishType.notesAr || "",
+            materialMultiplier: interiorFinishType.materialMultiplier,
+            laborMultiplier: interiorFinishType.laborMultiplier,
+            durationMultiplier: interiorFinishType.durationMultiplier
+          }
+        : null,
+      materialAdditions: styleMaterialRows
+    },
     costIndex: calculateCostIndex(totalCost, grossBuiltArea, finishLevel, countryCode, factors),
     costs: {
       totalCost,
@@ -440,6 +608,7 @@ export function calculateEstimate(rawInput, data) {
     },
     warnings: [
       "النتائج تقديرية وليست بديلًا عن مهندس أو مكتب هندسي أو حصر كميات معتمد.",
+      ...styleWarnings,
       priceWarning,
       "لا تستخدم الأداة كعرض سعر تعاقدي أو مستند ترخيص."
     ]
@@ -447,21 +616,31 @@ export function calculateEstimate(rawInput, data) {
 }
 
 export function sanitizeProjectInput(input) {
+  const projectType = input.projectType || "villa";
+  const constructionType = input.constructionType || "shell";
+  const architecturalStyle = ARCHITECTURAL_STYLE_PROJECTS.has(projectType) ? input.architecturalStyle || "modern" : "";
+  const interiorFinishType =
+    constructionType === "full" && INTERIOR_FINISH_PROJECTS.has(projectType)
+      ? input.interiorFinishType || "traditional"
+      : "";
+
   return {
     countryCode: input.countryCode || "SA",
     city: input.city || "",
-    projectType: input.projectType || "villa",
+    projectType,
     landArea: toNumber(input.landArea, 500),
     builtArea: toNumber(input.builtArea, 300),
     builtAreaMode: input.builtAreaMode === "per_floor" ? "per_floor" : "total",
     floors: Math.max(1, Math.round(toNumber(input.floors, 1))),
+    architecturalStyle,
     basement: Boolean(input.basement),
     fence: Boolean(input.fence),
     undergroundTank: Boolean(input.undergroundTank),
     roofTank: Boolean(input.roofTank),
     elevator: Boolean(input.elevator),
-    constructionType: input.constructionType || "shell",
+    constructionType,
     finishLevel: input.finishLevel || "medium",
+    interiorFinishType,
     showPlan2d: Boolean(input.showPlan2d),
     designStyle2d: input.designStyle2d || "modern",
     showPlan3d: Boolean(input.showPlan3d),

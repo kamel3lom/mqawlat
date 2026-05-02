@@ -11,6 +11,9 @@ const state = {
   result: null
 };
 
+const ARCHITECTURAL_STYLE_PROJECTS = new Set(["villa", "house", "rest_house"]);
+const INTERIOR_FINISH_PROJECTS = new Set(["apartment", "townhouse", "studio", "annex"]);
+
 const $ = (selector) => document.querySelector(selector);
 
 function formatNumber(value, digits = 2) {
@@ -54,6 +57,14 @@ function populateFormOptions() {
     .map(([value, item]) => option(value, item.labelAr, value === "medium"))
     .join("");
 
+  $("#architecturalStyle").innerHTML = Object.entries(factors.architecturalStyles || {})
+    .map(([value, item]) => option(value, item.labelAr, value === "modern"))
+    .join("");
+
+  $("#interiorFinishType").innerHTML = Object.entries(factors.interiorFinishTypes || {})
+    .map(([value, item]) => option(value, item.labelAr, value === "traditional"))
+    .join("");
+
   const styleOptions = state.data.designTemplates.styles
     .map((style) => option(style.id, style.nameAr, style.id === "modern"))
     .join("");
@@ -62,6 +73,8 @@ function populateFormOptions() {
 
   renderCountryContext();
   toggleFinishLevel();
+  toggleArchitecturalStyle();
+  toggleInteriorFinishType();
   toggleDesignOptions();
 }
 
@@ -175,6 +188,44 @@ function toggleFinishLevel() {
   const isFull = constructionType === "full";
   wrapper.hidden = !isFull;
   $("#finishLevel").disabled = !isFull;
+  toggleInteriorFinishType();
+}
+
+function toggleArchitecturalStyle() {
+  const projectType = $("#projectType").value;
+  const wrapper = $("#architecturalStyleWrapper");
+  const select = $("#architecturalStyle");
+  const isRequired = ARCHITECTURAL_STYLE_PROJECTS.has(projectType);
+
+  wrapper.hidden = !isRequired;
+  select.disabled = !isRequired;
+  select.required = isRequired;
+
+  if (isRequired && !select.value) {
+    select.value = "modern";
+  }
+  if (!isRequired) {
+    select.value = "";
+  }
+}
+
+function toggleInteriorFinishType() {
+  const projectType = $("#projectType").value;
+  const constructionType = new FormData($("#projectForm")).get("constructionType");
+  const wrapper = $("#interiorFinishTypeWrapper");
+  const select = $("#interiorFinishType");
+  const isRequired = constructionType === "full" && INTERIOR_FINISH_PROJECTS.has(projectType);
+
+  wrapper.hidden = !isRequired;
+  select.disabled = !isRequired;
+  select.required = isRequired;
+
+  if (isRequired && !select.value) {
+    select.value = "traditional";
+  }
+  if (!isRequired) {
+    select.value = "";
+  }
 }
 
 function toggleDesignOptions() {
@@ -193,6 +244,7 @@ function readFormInput() {
     builtArea: formData.get("builtArea"),
     builtAreaMode: formData.get("builtAreaMode"),
     floors: formData.get("floors"),
+    architecturalStyle: formData.get("architecturalStyle"),
     basement: $("#basement").checked,
     fence: $("#fence").checked,
     undergroundTank: $("#undergroundTank").checked,
@@ -200,6 +252,7 @@ function readFormInput() {
     elevator: $("#elevator").checked,
     constructionType: formData.get("constructionType"),
     finishLevel: formData.get("finishLevel"),
+    interiorFinishType: formData.get("interiorFinishType"),
     showPlan2d: $("#showPlan2d").checked,
     designStyle2d: formData.get("designStyle2d"),
     showPlan3d: $("#showPlan3d").checked,
@@ -216,6 +269,8 @@ function fillForm(input) {
   $("#builtArea").value = input.builtArea || 300;
   $("#builtAreaMode").value = input.builtAreaMode || "total";
   $("#floors").value = input.floors || 1;
+  $("#architecturalStyle").value = input.architecturalStyle || "modern";
+  toggleArchitecturalStyle();
 
   FEATURE_KEYS.forEach((key) => {
     $(`#${key}`).checked = Boolean(input[key]);
@@ -227,11 +282,12 @@ function fillForm(input) {
   });
 
   $("#finishLevel").value = input.finishLevel || "medium";
+  $("#interiorFinishType").value = input.interiorFinishType || "traditional";
+  toggleFinishLevel();
   $("#showPlan2d").checked = Boolean(input.showPlan2d);
   $("#designStyle2d").value = input.designStyle2d || "modern";
   $("#showPlan3d").checked = Boolean(input.showPlan3d);
   $("#designStyle3d").value = input.designStyle3d || "modern";
-  toggleFinishLevel();
   toggleDesignOptions();
 }
 
@@ -273,7 +329,47 @@ function renderSummary(result) {
     )
     .join("");
 
-  $("#resultWarnings").innerHTML = result.warnings.map((warning) => `<p>${warning}</p>`).join("");
+  $("#resultWarnings").innerHTML = [
+    ...renderStyleImpact(result),
+    ...result.warnings.map((warning) => `<p>${warning}</p>`)
+  ].join("");
+}
+
+function formatImpactPercent(value) {
+  const percent = (Number(value) - 1) * 100;
+  const sign = percent > 0 ? "+" : "";
+  return `${sign}${formatNumber(percent, 0)}%`;
+}
+
+function renderStyleImpact(result) {
+  const styleEffects = result.styleEffects || {};
+  const rows = [];
+
+  if (styleEffects.architecturalStyle) {
+    const style = styleEffects.architecturalStyle;
+    rows.push(`
+      <p>
+        <strong>نوع التصميم:</strong> ${style.labelAr}
+        | المواد المضافة ${formatImpactPercent(style.materialMultiplier)}
+        | العمالة ${formatImpactPercent(style.laborMultiplier)}
+        | المدة ${formatImpactPercent(style.durationMultiplier)}
+      </p>
+    `);
+  }
+
+  if (styleEffects.interiorFinishType) {
+    const finishType = styleEffects.interiorFinishType;
+    rows.push(`
+      <p>
+        <strong>نوع التشطيب الداخلي:</strong> ${finishType.labelAr}
+        | مواد التشطيب ${formatImpactPercent(finishType.materialMultiplier)}
+        | عمالة التشطيب ${formatImpactPercent(finishType.laborMultiplier)}
+        | مدة التشطيب ${formatImpactPercent(finishType.durationMultiplier)}
+      </p>
+    `);
+  }
+
+  return rows;
 }
 
 function renderMaterialsTable(result) {
@@ -406,8 +502,10 @@ function clearLocalData() {
     builtArea: 300,
     builtAreaMode: "total",
     floors: 1,
+    architecturalStyle: "modern",
     constructionType: "shell",
     finishLevel: "medium",
+    interiorFinishType: "traditional",
     showPlan2d: false,
     designStyle2d: "modern",
     showPlan3d: false,
@@ -425,9 +523,14 @@ function bindEvents() {
   });
 
   $("#countrySelect").addEventListener("change", renderCountryContext);
+  $("#projectType").addEventListener("change", () => {
+    toggleArchitecturalStyle();
+    toggleInteriorFinishType();
+  });
   document.querySelectorAll('input[name="constructionType"]').forEach((radio) => {
     radio.addEventListener("change", toggleFinishLevel);
   });
+  $("#finishLevel").addEventListener("change", toggleInteriorFinishType);
   $("#showPlan2d").addEventListener("change", toggleDesignOptions);
   $("#showPlan3d").addEventListener("change", toggleDesignOptions);
 

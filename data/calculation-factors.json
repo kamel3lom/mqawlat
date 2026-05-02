@@ -45,6 +45,140 @@
       "durationMultiplier": 0.9
     }
   },
+  "architecturalStyles": {
+    "najdi": {
+      "labelAr": "نجدي",
+      "descriptionAr": "تصميم مستوحى من العمارة النجدية المعاصرة، يزيد فيه حضور عناصر الطين المعالج، اللياسة الترابية، الحجر المحلي، الجدران السميكة نسبيًا، الزخارف الجصية أو الطينية، والعناصر الخارجية ذات الطابع الصحراوي.",
+      "materialMultiplier": 1.08,
+      "laborMultiplier": 1.1,
+      "durationMultiplier": 1.08,
+      "additionsPerSqm": {
+        "clay_plaster": 0.65,
+        "natural_stone": 0.18,
+        "decorative_plaster": 0.22,
+        "thermal_insulation": 0.08
+      },
+      "notesAr": "الطراز النجدي لا يعني البناء بالطين التقليدي الخام في العصر الحديث، بل استخدام مواد حديثة تحاكي الطابع النجدي مثل اللياسة الترابية، الحجر المحلي، العزل الحراري، والزخارف الخارجية."
+    },
+    "levantine": {
+      "labelAr": "شامي",
+      "descriptionAr": "تصميم مستوحى من البيت الشامي، يزيد فيه استخدام الحجر الطبيعي أو الحجر القدسي أو الحجر الجيري، الأقواس، الإطارات الحجرية، البلاط الزخرفي، الفناء أو العناصر الداخلية ذات الطابع التراثي.",
+      "materialMultiplier": 1.12,
+      "laborMultiplier": 1.14,
+      "durationMultiplier": 1.12,
+      "additionsPerSqm": {
+        "natural_stone": 0.42,
+        "stone_cladding": 0.36,
+        "decorative_tiles": 0.18,
+        "arches_frames": 0.08
+      },
+      "notesAr": "الطراز الشامي المعاصر يعتمد غالبًا على الحجر الطبيعي أو الكسوة الحجرية، مع تفاصيل زخرفية تتطلب عمالة أكثر من البناء المودرن البسيط."
+    },
+    "egyptian": {
+      "labelAr": "مصري",
+      "descriptionAr": "تصميم مستوحى من العمارة المصرية السكنية المعاصرة، يركز على الخرسانة المسلحة، الطوب أو البلوك، اللياسة والدهانات، وقد يضيف حجرًا فرعونيًا أو واجهات حجرية جزئية بحسب مستوى التشطيب.",
+      "materialMultiplier": 1.03,
+      "laborMultiplier": 1.04,
+      "durationMultiplier": 1.03,
+      "additionsPerSqm": {
+        "stone_cladding": 0.16,
+        "decorative_plaster": 0.1,
+        "paint": 0.18
+      },
+      "notesAr": "الطراز المصري هنا لا يعني المعابد أو العناصر الأثرية، بل السكن المصري الحديث مع إمكانية وجود حجر واجهات أو زخارف محدودة."
+    },
+    "andalusian": {
+      "labelAr": "أندلسي",
+      "descriptionAr": "تصميم مستوحى من الطراز الأندلسي، يزيد فيه استخدام الأقواس، البلاط الزخرفي، المشربيات أو العناصر الخشبية، النوافير أو الفناء الداخلي، واللياسة البيضاء أو الحجرية.",
+      "materialMultiplier": 1.15,
+      "laborMultiplier": 1.18,
+      "durationMultiplier": 1.16,
+      "additionsPerSqm": {
+        "decorative_tiles": 0.34,
+        "arches_frames": 0.14,
+        "woodwork": 0.16,
+        "stone_cladding": 0.2,
+        "decorative_plaster": 0.22
+      },
+      "notesAr": "الطراز الأندلسي أعلى تكلفة من المودرن البسيط بسبب كثافة التفاصيل الزخرفية والأقواس والبلاط والنجارة."
+    },
+    "traditional": {
+      "labelAr": "تقليدي",
+      "descriptionAr": "تصميم تقليدي عام يستخدم مواد مألوفة مثل البلوك، اللياسة، الدهان، بلاط تقليدي، واجهات بسيطة، وتفاصيل زخرفية محدودة.",
+      "materialMultiplier": 1.04,
+      "laborMultiplier": 1.04,
+      "durationMultiplier": 1.03,
+      "additionsPerSqm": {
+        "decorative_plaster": 0.08,
+        "stone_cladding": 0.08
+      },
+      "notesAr": "الطراز التقليدي أقل تعقيدًا من الشامي أو الأندلسي، لكنه أعلى قليلًا من المودرن البسيط إذا احتوى على واجهات زخرفية."
+    },
+    "modern": {
+      "labelAr": "مودرن حديث",
+      "descriptionAr": "تصميم حديث يعتمد على خطوط بسيطة وواجهات نظيفة وفتحات زجاجية أكبر نسبيًا ومواد تشطيب عصرية.",
+      "materialMultiplier": 1.06,
+      "laborMultiplier": 1.05,
+      "durationMultiplier": 1.04,
+      "additionsPerSqm": {
+        "glass_facade": 0.16,
+        "exterior_cladding": 0.18,
+        "paint": 0.12
+      },
+      "notesAr": "الطراز المودرن لا يعني الأرخص دائمًا؛ قد تزيد تكلفته عند استخدام الزجاج الكبير أو الكسوات الحديثة."
+    }
+  },
+  "interiorFinishTypes": {
+    "traditional": {
+      "labelAr": "تقليدي",
+      "descriptionAr": "تشطيب داخلي مألوف يعتمد على الدهان، البلاط أو السيراميك، الأبواب التقليدية، وتمديدات أساسية.",
+      "materialMultiplier": 1,
+      "laborMultiplier": 1,
+      "durationMultiplier": 1,
+      "additionsPerSqm": {
+        "paint": 0.2,
+        "tiles": 0.12
+      }
+    },
+    "stone": {
+      "labelAr": "حجر",
+      "descriptionAr": "تشطيب داخلي يزيد فيه استخدام الحجر الداخلي أو الكسوة الحجرية للجدران أو أجزاء منها.",
+      "materialMultiplier": 1.1,
+      "laborMultiplier": 1.12,
+      "durationMultiplier": 1.08,
+      "additionsPerSqm": {
+        "interior_stone": 0.34,
+        "stone_cladding": 0.2,
+        "adhesive_mortar": 0.18
+      }
+    },
+    "wood": {
+      "labelAr": "خشب",
+      "descriptionAr": "تشطيب داخلي يعتمد على الخشب أو بدائل الخشب في الجدران، الأسقف، الديكورات، الأبواب، أو الكسوات.",
+      "materialMultiplier": 1.12,
+      "laborMultiplier": 1.14,
+      "durationMultiplier": 1.1,
+      "additionsPerSqm": {
+        "woodwork": 0.32,
+        "wood_cladding": 0.26,
+        "paint": 0.08
+      }
+    },
+    "wood_stone_mix": {
+      "labelAr": "خليط بين الخشب والحجر",
+      "descriptionAr": "تشطيب داخلي يجمع بين الحجر والخشب، وغالبًا يكون أعلى تكلفة من التشطيب التقليدي بسبب تعدد الخامات والحرف.",
+      "materialMultiplier": 1.16,
+      "laborMultiplier": 1.18,
+      "durationMultiplier": 1.12,
+      "additionsPerSqm": {
+        "interior_stone": 0.22,
+        "stone_cladding": 0.16,
+        "woodwork": 0.24,
+        "wood_cladding": 0.2,
+        "adhesive_mortar": 0.12
+      }
+    }
+  },
   "countryCostMultipliers": {
     "SA": { "materials": 1, "labor": 1, "duration": 1 },
     "QA": { "materials": 1.06, "labor": 1.08, "duration": 1.03 },

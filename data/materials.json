@@ -181,6 +181,138 @@
       "tablePriority": 16
     },
     {
+      "id": "clay_plaster",
+      "nameAr": "لياسة طينية / ترابية معالجة",
+      "nameEn": "Treated clay plaster",
+      "category": "واجهات وتصميم خارجي",
+      "unitAr": "م²",
+      "unitEn": "m2",
+      "includedFor": ["shell", "full"],
+      "stage": "الواجهات واللياسة الخارجية",
+      "tablePriority": 17
+    },
+    {
+      "id": "natural_stone",
+      "nameAr": "حجر طبيعي",
+      "nameEn": "Natural stone",
+      "category": "واجهات وتصميم خارجي",
+      "unitAr": "م²",
+      "unitEn": "m2",
+      "includedFor": ["shell", "full"],
+      "stage": "الواجهات والعناصر المعمارية",
+      "tablePriority": 18
+    },
+    {
+      "id": "stone_cladding",
+      "nameAr": "كسوة حجرية",
+      "nameEn": "Stone cladding",
+      "category": "واجهات وتصميم خارجي",
+      "unitAr": "م²",
+      "unitEn": "m2",
+      "includedFor": ["shell", "full"],
+      "stage": "الكسوات الحجرية",
+      "tablePriority": 19
+    },
+    {
+      "id": "interior_stone",
+      "nameAr": "حجر داخلي",
+      "nameEn": "Interior stone",
+      "category": "التشطيب",
+      "unitAr": "م²",
+      "unitEn": "m2",
+      "includedFor": ["full"],
+      "stage": "التشطيبات الداخلية",
+      "tablePriority": 20
+    },
+    {
+      "id": "decorative_tiles",
+      "nameAr": "بلاط زخرفي",
+      "nameEn": "Decorative tiles",
+      "category": "واجهات وتصميم خارجي",
+      "unitAr": "م²",
+      "unitEn": "m2",
+      "includedFor": ["shell", "full"],
+      "stage": "العناصر الزخرفية والبلاط",
+      "tablePriority": 21
+    },
+    {
+      "id": "arches_frames",
+      "nameAr": "أقواس وإطارات زخرفية",
+      "nameEn": "Decorative arches and frames",
+      "category": "واجهات وتصميم خارجي",
+      "unitAr": "م²",
+      "unitEn": "m2",
+      "includedFor": ["shell", "full"],
+      "stage": "العناصر المعمارية الزخرفية",
+      "tablePriority": 22
+    },
+    {
+      "id": "decorative_plaster",
+      "nameAr": "زخارف جصية / لياسة زخرفية",
+      "nameEn": "Decorative plaster",
+      "category": "واجهات وتصميم خارجي",
+      "unitAr": "م²",
+      "unitEn": "m2",
+      "includedFor": ["shell", "full"],
+      "stage": "الزخارف واللياسة",
+      "tablePriority": 23
+    },
+    {
+      "id": "woodwork",
+      "nameAr": "أعمال خشبية",
+      "nameEn": "Woodwork",
+      "category": "التشطيب",
+      "unitAr": "م²",
+      "unitEn": "m2",
+      "includedFor": ["shell", "full"],
+      "stage": "الأعمال الخشبية والديكورات",
+      "tablePriority": 24
+    },
+    {
+      "id": "wood_cladding",
+      "nameAr": "كسوة خشبية",
+      "nameEn": "Wood cladding",
+      "category": "التشطيب",
+      "unitAr": "م²",
+      "unitEn": "m2",
+      "includedFor": ["full"],
+      "stage": "التشطيبات الداخلية",
+      "tablePriority": 25
+    },
+    {
+      "id": "glass_facade",
+      "nameAr": "زجاج واجهات",
+      "nameEn": "Glass facade",
+      "category": "واجهات وتصميم خارجي",
+      "unitAr": "م²",
+      "unitEn": "m2",
+      "includedFor": ["shell", "full"],
+      "stage": "الواجهات الحديثة",
+      "tablePriority": 26
+    },
+    {
+      "id": "exterior_cladding",
+      "nameAr": "كسوة واجهات حديثة",
+      "nameEn": "Modern exterior cladding",
+      "category": "واجهات وتصميم خارجي",
+      "unitAr": "م²",
+      "unitEn": "m2",
+      "includedFor": ["shell", "full"],
+      "stage": "الواجهات الحديثة",
+      "tablePriority": 27
+    },
+    {
+      "id": "adhesive_mortar",
+      "nameAr": "مونة أو لاصق تركيب",
+      "nameEn": "Adhesive mortar",
+      "category": "التشطيب",
+      "unitAr": "م²",
+      "unitEn": "m2",
+      "includedFor": ["full"],
+      "stage": "تركيب الكسوات والبلاط",
+      "tablePriority": 28
+    },
+    {
       "id": "elevator_system",
       "nameAr": "تجهيز المصعد",
       "nameEn": "Elevator system allowance",
@@ -189,7 +321,7 @@
       "unitEn": "elevator",
       "includedFor": ["shell", "full"],
       "stage": "الأعمال الخاصة",
-      "tablePriority": 17
+      "tablePriority": 30
     }
   ]
 }

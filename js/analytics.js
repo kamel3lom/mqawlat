@@ -158,12 +158,21 @@ function syncPendingCounters() {
   });
 }
 
+function hasLocalCounterHistory(name) {
+  const stats = readLocalStats();
+  return (
+    Number(stats[name]) > 0 ||
+    getStoredValue(COUNTER_COUNTED_KEYS[name]) === "1" ||
+    getStoredValue(COUNTER_PENDING_KEYS[name]) === "1"
+  );
+}
+
 export function initAnalytics() {
   renderStats();
   void registerSiteVisit();
   syncPendingCounters();
   void refreshCounter("calculations");
-  void refreshCounter("reports");
+  if (hasLocalCounterHistory("reports")) void refreshCounter("reports");
 }
 
 export async function registerSiteVisit() {

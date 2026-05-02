@@ -118,6 +118,11 @@
             <span>عدد الطوابق</span>
             <input id="floors" name="floors" type="number" min="1" step="1" value="1" required>
           </label>
+
+          <label id="architecturalStyleWrapper" hidden>
+            <span>نوع التصميم</span>
+            <select id="architecturalStyle" name="architecturalStyle" disabled></select>
+          </label>
         </div>
 
         <fieldset class="toggle-grid">
@@ -160,6 +165,13 @@
           <label>
             <span>مستوى التشطيب</span>
             <select id="finishLevel" name="finishLevel"></select>
+          </label>
+        </div>
+
+        <div class="form-grid compact" id="interiorFinishTypeWrapper" hidden>
+          <label>
+            <span>نوع التشطيب الداخلي</span>
+            <select id="interiorFinishType" name="interiorFinishType" disabled></select>
           </label>
         </div>
 

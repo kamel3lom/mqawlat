@@ -15,6 +15,12 @@ function formatCurrency(value, currency) {
   return `${formatNumber(value)} ${escapeHtml(currency.symbolAr || currency.code)}`;
 }
 
+function formatImpactPercent(value) {
+  const percent = (Number(value) - 1) * 100;
+  const sign = percent > 0 ? "+" : "";
+  return `${sign}${formatNumber(percent)}%`;
+}
+
 function tableRows(rows, cells) {
   return rows
     .map(
@@ -59,6 +65,58 @@ export function exportReport(result) {
     "sourceReliability",
     (row) => (row.isDemo ? "تجريبي" : "مدخل")
   ]);
+  const styleEffects = result.styleEffects || {};
+  const styleAdditionRows = tableRows(styleEffects.materialAdditions || [], [
+    "sourceLabel",
+    "nameAr",
+    (row) => formatNumber(row.quantity),
+    "unit",
+    (row) => formatCurrency(row.cost, result.currency)
+  ]);
+  const styleSummaryRows = [
+    styleEffects.architecturalStyle
+      ? `
+        <div><strong>نوع التصميم:</strong> ${escapeHtml(styleEffects.architecturalStyle.labelAr)}</div>
+        <div><strong>أثره:</strong> مواد مضافة ${formatImpactPercent(
+          styleEffects.architecturalStyle.materialMultiplier
+        )}، عمالة ${formatImpactPercent(styleEffects.architecturalStyle.laborMultiplier)}، مدة ${formatImpactPercent(
+          styleEffects.architecturalStyle.durationMultiplier
+        )}</div>
+        <div><strong>الوصف:</strong> ${escapeHtml(styleEffects.architecturalStyle.descriptionAr)}</div>
+        <div><strong>ملاحظة:</strong> ${escapeHtml(styleEffects.architecturalStyle.notesAr || "لا توجد ملاحظة إضافية.")}</div>
+      `
+      : "",
+    styleEffects.interiorFinishType
+      ? `
+        <div><strong>نوع التشطيب الداخلي:</strong> ${escapeHtml(styleEffects.interiorFinishType.labelAr)}</div>
+        <div><strong>أثره:</strong> مواد التشطيب ${formatImpactPercent(
+          styleEffects.interiorFinishType.materialMultiplier
+        )}، عمالة التشطيب ${formatImpactPercent(
+          styleEffects.interiorFinishType.laborMultiplier
+        )}، مدة التشطيب ${formatImpactPercent(styleEffects.interiorFinishType.durationMultiplier)}</div>
+        <div><strong>الوصف:</strong> ${escapeHtml(styleEffects.interiorFinishType.descriptionAr)}</div>
+      `
+      : ""
+  ].join("");
+  const styleSection =
+    styleSummaryRows || styleAdditionRows
+      ? `
+        <h2>التصميم والتشطيب المؤثران في الحساب</h2>
+        <div class="warning">هذه معاملات تقديرية قابلة للمراجعة الهندسية حسب المخططات والمواصفات الفعلية.</div>
+        <div class="box grid">${styleSummaryRows || "<div>لا يوجد نمط تصميم أو تشطيب داخلي مطبق على هذا المشروع.</div>"}</div>
+        ${
+          styleAdditionRows
+            ? `
+              <h3>المواد الإضافية الناتجة عن الاختيارات</h3>
+              <table>
+                <thead><tr><th>المصدر</th><th>المادة</th><th>الكمية</th><th>الوحدة</th><th>التكلفة</th></tr></thead>
+                <tbody>${styleAdditionRows}</tbody>
+              </table>
+            `
+            : ""
+        }
+      `
+      : "";
   const designSection = result.designPlans
     ? `
       <h2>المخططات التخيلية</h2>
@@ -139,6 +197,8 @@ export function exportReport(result) {
     <div><strong>طريقة المساحة:</strong> ${escapeHtml(builtAreaModeLabel)}</div>
     <div><strong>إجمالي مساحة البناء:</strong> ${formatNumber(result.areas.grossBuiltArea)} م²</div>
   </div>
+
+  ${styleSection}
 
   <h2>النتائج المالية</h2>
   <div class="box grid">
