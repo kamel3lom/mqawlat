@@ -1,20 +1,46 @@
 {
-  "lastRunAt": "",
-  "lastSuccessfulRunAt": "",
+  "lastRunAt": "2026-05-03T09:05:30Z",
+  "lastSuccessfulRunAt": "2026-05-03T09:05:30Z",
   "mode": "official-source-check",
-  "noticeAr": "يعمل التحديث اليومي كفحص دوري للمصادر الرسمية. لا تتحول الأسعار إلى رسمية إلا إذا نجح السكربت في استخراجها من مصدر رسمي قابل للتتبع.",
+  "noticeAr": "التحديث اليومي يفحص المصادر الرسمية فقط، ولا يخترع أسعارًا ولا يحول البنود التجريبية إلى رسمية دون استخراج قابل للتتبع.",
   "countries": {
     "SA": {
-      "status": "partial-official-parser-ready",
-      "source": "GASTAT APGS PDF",
-      "notesAr": "مفعل جزئيًا للمواد المطابقة في نشرة متوسطات أسعار السلع والخدمات السعودية."
+      "status": "partial-official-parser-active",
+      "source": "متوسطات أسعار السلع والخدمات APGS",
+      "notesAr": "تم فحص ملف GASTAT الرسمي وتحديث البنود المطابقة فقط. بقية البنود التجريبية لا تزال غير رسمية.",
+      "latestKnownFileUrl": "https://www.stats.gov.sa/documents/20117/2435267/Average%2BPrices%2Bof%2BGoods%2Band%2BServices%2BDecember%2B2025%2BAR_EN.pdf/20c9b563-1978-2996-61c4-3ae749093c18?t=1768453955663",
+      "lastCheckedAt": "2026-05-03T09:05:39Z",
+      "updatedItemCount": 0
     },
-    "QA": { "status": "not-enabled", "notesAr": "لا يوجد Parser مفعل لمصدر أسعار وحدات رسمي." },
-    "BH": { "status": "not-enabled", "notesAr": "لا يوجد Parser مفعل لمصدر أسعار وحدات رسمي." },
-    "AE": { "status": "not-enabled", "notesAr": "توجد مصادر رسمية مرشحة، لكن لم يتم تفعيل Parser موحد بعد." },
-    "OM": { "status": "not-enabled", "notesAr": "لا يوجد Parser مفعل لمصدر أسعار وحدات رسمي." },
-    "KW": { "status": "not-enabled", "notesAr": "لا يوجد Parser مفعل لمصدر أسعار وحدات رسمي." },
-    "EG": { "status": "not-enabled", "notesAr": "توجد نشرات رسمية مرشحة، لكن لم يتم تفعيل Parser بعد." },
-    "JO": { "status": "not-enabled", "notesAr": "توجد مصادر مرشحة، لكن لم يتم تفعيل Parser بعد." }
-  }
+    "QA": {
+      "status": "not-enabled",
+      "notesAr": "لا يوجد Parser مفعل لمصدر أسعار وحدات رسمي."
+    },
+    "BH": {
+      "status": "not-enabled",
+      "notesAr": "لا يوجد Parser مفعل لمصدر أسعار وحدات رسمي."
+    },
+    "AE": {
+      "status": "not-enabled",
+      "notesAr": "توجد مصادر رسمية مرشحة، لكن لم يتم تفعيل Parser موحد بعد."
+    },
+    "OM": {
+      "status": "not-enabled",
+      "notesAr": "لا يوجد Parser مفعل لمصدر أسعار وحدات رسمي."
+    },
+    "KW": {
+      "status": "not-enabled",
+      "notesAr": "لا يوجد Parser مفعل لمصدر أسعار وحدات رسمي."
+    },
+    "EG": {
+      "status": "not-enabled",
+      "notesAr": "توجد نشرات رسمية مرشحة، لكن لم يتم تفعيل Parser بعد."
+    },
+    "JO": {
+      "status": "not-enabled",
+      "notesAr": "توجد مصادر مرشحة، لكن لم يتم تفعيل Parser بعد."
+    }
+  },
+  "lastError": "",
+  "changedItemCount": 0
 }
