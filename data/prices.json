@@ -5,7 +5,7 @@
     "noticeAr": "تعمل GitHub Actions على فحص المصادر الرسمية يوميًا. الأسعار السعودية مفعلة جزئيًا من مصدر رسمي قابل للتتبع، أما أي بند موسوم isDemo=true أو أي دولة غير مفعلة في price-update-status.json فهي بيانات تجريبية وليست مؤشرًا رسميًا.",
     "replacementPolicyAr": "استبدل قيم priceMin و priceMax و averagePrice للبنود التجريبية بمصادر رسمية أو عروض موردين موثقة قبل الاعتماد على التقرير.",
     "recordShapeAr": "كل سجل دولة يحتوي العملة ومصدر الأسعار وقائمة أسعار المواد. يضيف محمل البيانات بيانات الدولة والمصدر لكل مادة عند الحساب.",
-    "lastUpdateCheckAt": "2026-05-24T06:46:11Z"
+    "lastUpdateCheckAt": "2026-05-25T07:56:57Z"
   },
   "countryPriceBooks": [
     {
@@ -14,7 +14,7 @@
       "currency": "SAR",
       "sourceName": "Mixed price book - official parser where item source is marked, demo otherwise",
       "sourceUrl": "https://www.stats.gov.sa/documents/20117/2435267/Average%2BPrices%2Bof%2BGoods%2Band%2BServices%2BDecember%2B2025%2BAR_EN.pdf/20c9b563-1978-2996-61c4-3ae749093c18?t=1768453955663",
-      "lastUpdated": "2026-05-24",
+      "lastUpdated": "2026-05-25",
       "updateMethod": "GitHub Actions daily official-source check",
       "sourceReliability": "مختلط",
       "isDemo": true,
