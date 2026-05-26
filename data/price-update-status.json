@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-05-25T07:56:57Z",
-  "lastSuccessfulRunAt": "2026-05-25T07:56:57Z",
+  "lastRunAt": "2026-05-26T06:55:15Z",
+  "lastSuccessfulRunAt": "2026-05-26T06:55:15Z",
   "mode": "official-source-check",
   "noticeAr": "التحديث اليومي يفحص المصادر الرسمية فقط، ولا يخترع أسعارًا ولا يحول البنود التجريبية إلى رسمية دون استخراج قابل للتتبع.",
   "countries": {
@@ -9,7 +9,7 @@
       "source": "متوسطات أسعار السلع والخدمات APGS",
       "notesAr": "تم فحص ملف GASTAT الرسمي وتحديث البنود المطابقة فقط. بقية البنود التجريبية لا تزال غير رسمية.",
       "latestKnownFileUrl": "https://www.stats.gov.sa/documents/20117/2435267/Average%2BPrices%2Bof%2BGoods%2Band%2BServices%2BDecember%2B2025%2BAR_EN.pdf/20c9b563-1978-2996-61c4-3ae749093c18?t=1768453955663",
-      "lastCheckedAt": "2026-05-25T07:57:05Z",
+      "lastCheckedAt": "2026-05-26T06:55:25Z",
       "updatedItemCount": 0
     },
     "QA": {
